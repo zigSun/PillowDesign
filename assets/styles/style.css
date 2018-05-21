@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "SFUIDisplaySMB";
+  src: url("../fonts/SFUIDisplay-Semibold.ttf");
+}
+
+@font-face {
+  font-family: "SFUIDisplayReg";
+  src: url("../fonts/SFUIDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SFUIDisplayLight";
+  src: url("../fonts/SFUIDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: "AutoNumber";
+  src: url("../fonts/AUTONUM.ttf");
+}
+
+.header-text {
+  text-align: center;
+  font-family: "SFUIDisplaySMB";
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+/* FORM STYLES */
+.pillow-constructor-form {
+  flex-grow: 1;
+  font-family: "SFUIDisplaySMB";
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.pillow-form-item {
+  margin-bottom: 1.5rem;
+}
+.pillow-form-item label {
+  display: inline-block;
+  font-family: "SFUIDisplayReg";
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pillow-form-item .pillow-price {
+  margin: 0;
+  font-family: "SFUIDisplayReg";
+  font-size: 1.6rem;
+}
+
+.pillow-form-item .pillow-current-price {
+  color: #56c75a;
+}
+
+/* INPUTS STYLES*/
+
+.pillow-form-item button[type="submit"] {
+  color: white;
+  background-color: #56c75a;
+
+  border: none;
+  border-radius: 10px;
+
+  height: 4rem;
+  width: 50%;
+
+  font-family: "SFUIDisplaySMB";
+  font-size: 1.5rem;
+}
+.pillow-form-item button[type="submit"]:hover {
+  background-color: #0fb501;
+}
+
+.pillow-form-item input[type="text"],
+.pillow-form-item select,
+.pillow-form-item input[type="number"],
+.pillow-form-item textarea {
+  border: 2px solid #b9b9b9;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 3rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+
+  font-family: "SFUIDisplayLight";
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.pillow-form-item input[type="text"]:focus,
+.pillow-form-item select:focus,
+.pillow-form-item input[type="number"]:focus,
+.pillow-form-item textarea:focus,
+.pillow-form-item button[type="submit"] {
+  outline: none;
+  border-color: black;
+}
+
+.pillow-form-item textarea {
+  resize: vertical;
+  padding-right: 1rem;
+}
+/* COLOR PICKER SETTINGS */
+.pillow-color-radio-group input[type="radio"] {
+  display: none;
+}
+.color-button {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  margin: 10px;
+
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.color-button span {
+  display: block;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0.5rem;
+  padding: 0;
+
+  background-color: green;
+
+  cursor: pointer;
+
+  border-radius: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: ease 0.3s;
+}
+
+.pillow-color-radio-group input[type="radio"]:checked ~ .color-button span {
+  padding: 10px;
+}
+
+.color-button span:hover {
+  padding: 10px;
+}
+
+.color-button .milky {
+  background-color: #e9e6e1;
+}
+.color-button .black {
+  background-color: black;
+}
+.color-button .red {
+  background-color: #e82b00;
+}
+.color-button .ruby {
+  background-color: #861f1c;
+}
+.color-button .cyan {
+  background-color: #559ffd;
+}
+.color-button .blue {
+  background-color: #141cfd;
+}
+.color-button .light-gray {
+  background-color: #dcdcdc;
+}
+.color-button .dark-gray {
+  background-color: #383a39;
+}
+.color-button .light-beige {
+  background-color: #e6dfca;
+}
+.color-button .dark-beige {
+  background-color: #9d7f5c;
+}
+.color-button .silver {
+  background-color: #c0c0c0;
+}
+.color-button .gold {
+  background-color: #ffd700;
+}
+.color-button .white {
+  background-color: #ffffff;
+}
+.color-button .rose {
+  background-color: #bc8f8f;
+}
+.color-button .gray {
+  background-color: #808080;
+}
+.color-button .green {
+  background-color: #008000;
+}
+
+.remark {
+  color: red;
+}
+
+/* PREVIEW STYLES */
+.pillow-constructor-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "SFUIDisplayReg";
+}
+.pillow-constructor-preview .section-header {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.pillow-constructor-preview .side-header {
+  color: #7a7a7a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pillow-constructor-preview img {
+  width: 400px;
+}
+
+.pillow-preview-frontside,
+.pillow-preview-backside,
+.headrest-preview {
+  align-content: center;
+  position: relative;
+}
+
+.front-logo,
+.front-model,
+.front-text,
+.front-number,
+.front-number-text,
+.front-number-region,
+.back-logo,
+.back-text,
+.headrest-logo {
+  position: absolute;
+}
+
+.front-logo img,
+.back-logo img,
+.headrest-logo img {
+  width: 100%;
+}
+.front-logo, 
+.back-logo {
+  width: 20%;
+  top: 20%;
+  left: 40%;
+}
+.headrest-logo {
+  width: 20%;
+  top: 25%;
+  left: 40%;
+}
+
+.front-model {
+  color: white;
+  text-align: center;
+  top: 40%;
+  left: 15%;
+  font-size: 1.5rem;
+  width: 70%;
+  word-break: break-word;
+}
+
+.front-text, .back-text {
+  color: white;
+  text-align: center;
+  top: 50%;
+  width: 70%;
+  left: 15%;
+  word-break: break-word;
+}
+.front-number {
+  top: 60%;
+  left: 25%;
+  width: 200px;
+}
+.front-number img {
+  width: 100%;
+}
+
+.front-number-text,
+.front-number-region {
+  font-family: "AutoNumber";
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.front-number-text {
+  top: -70%;
+  left: 15%;
+}
+.front-number-region {
+  top: -60%;
+  left: 80%;
+  font-size: 2rem;
+}
+
+.active-side {
+  outline: 2px #b9b9b9 solid;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  border: 2px solid #b9b9b9;
+  border-radius: 10px;
+  top: -60px;
+  box-sizing: content-box;
+  text-align: center;
+  left: -95px;
+  width: 190px;
+  z-index: 1000;
+}
+
+.color-button:hover .tooltip {
+  visibility: visible;
+}

@@ -1,0 +1,38 @@
+pillow-type  --select
+pillow-color --radio
+pillow-auto-mark-front --select
+pillow-auto-mark-reverse --select
+pillow-auto-model --text
+pillow-model-color --radio
+pillow-font-model --select
+pillow-advanced-front --text
+pillow-advanced-front-color --radio
+pillow-font-advanced-front --select
+pillow-auto-num --text
+pillow-auto-num-region --text
+pillow-advanced-text-reverse --text
+pillow-advanced-reverse-color --radio
+pillow-font-advanced-reverse --select
+pillow-color-edging --radio
+pillow-quantity --number
+pillow-order-comment --textarea
+
+
+--------------
+pillow-type=gosnum
+pillow-color=blue
+pillow-auro-mark-front=Без+лого
+pillow-auro-mark-reverse=Без+лого
+pillow-auto-model=
+pillow-model-color=white-model
+pillow-font-model=Простой
+pillow-advanced-front-text=
+pillow-advanced-front-color=white-advanced-front
+pillow-auto-num=
+pillow-auto-num-region=
+pillow-advanced-text-reverse=
+pillow-advanced-reverse-color=rose-advanced-reverse
+pillow-font-advanced-reverse=Простой
+pillow-color-edging=gold
+pillow-quantity=
+pillow-order-comment=
