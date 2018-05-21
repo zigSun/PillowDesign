@@ -106,7 +106,9 @@
                 <div class='pillow-form-item front-form headrest-form'>
                     <label for='pillow-auto-mark-front'>Марка автомобиля:</label>
                     <select id="pillow-auto-mark-front" name="pillow-auto-mark-front">
-                        <option>Без лого</option>
+                        <optgroup label="Категория 0">
+                            <option>Без лого</option>
+                        </optgroup>
                         <optgroup label="Категория 1">
                             <option>Audi</option>
                             <option>Audi AUDI</option>
@@ -196,7 +198,9 @@
                 <div class='pillow-form-item back-form'>
                     <label for='pillow-auto-mark-reverse'>Марка автомобиля:</label>
                     <select id="pillow-auto-mark-reverse" name="pillow-auto-mark-reverse">
-                        <option>Без лого</option>
+                        <optgroup label="Категория 0">
+                            <option>Без лого</option>
+                        </optgroup>
                         <optgroup label="Категория 1">
                             <option>Audi</option>
                             <option>Audi AUDI</option>
@@ -384,269 +388,269 @@
                                 <input type='radio' name='pillow-advanced-front-color' id='silver-advanced-front' value="silver-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Серебряный</div>
-                                        <span class='silver'></span>
-                                    </div>
+                                    <span class='silver'></span>
+                                </div>
                             </label>
                             <label for='gold-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='gold-advanced-front' value="gold-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Золотой</div>
-                                        <span class='gold'></span>
-                                    </div>
+                                    <span class='gold'></span>
+                                </div>
                             </label>
                             <label for='white-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='white-advanced-front' value="white-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Белый</div>
-                                        <span class='white'></span>
-                                    </div>
+                                    <span class='white'></span>
+                                </div>
                             </label>
                             <label for='black-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='black-advanced-front' value="black-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Черный</div>
-                                        <span class='black'></span>
-                                    </div>
+                                    <span class='black'></span>
+                                </div>
                             </label>
                             <label for='red-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='red-advanced-front' value="red-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Красный</div>
-                                        <span class='red'></span>
-                                    </div>
+                                    <span class='red'></span>
+                                </div>
                             </label>
                             <label for='rose-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='rose-advanced-front' value="rose-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Розовый</div>
-                                        <span class='rose'></span>
-                                    </div>
+                                    <span class='rose'></span>
+                                </div>
                             </label>
                             <label for='cyan-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='cyan-advanced-front' value="cyan-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Голубой</div>
-                                        <span class='cyan'></span>
-                                    </div>
+                                    <span class='cyan'></span>
+                                </div>
                             </label>
                             <label for='blue-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='blue-advanced-front' value="blue-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Синий</div>
-                                        <span class='blue'></span>
-                                    </div>
+                                    <span class='blue'></span>
+                                </div>
                             </label>
                             <label for='gray-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='gray-advanced-front' value="gray-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Серый</div>
-                                        <span class='gray'></span>
-                                    </div>
+                                    <span class='gray'></span>
+                                </div>
                             </label>
                             <label for='green-advanced-front'>
                                 <input type='radio' name='pillow-advanced-front-color' id='green-advanced-front' value="green-advanced-front">
                                 <div class='color-button'>
                                     <div class="tooltip">Зеленый</div>
-                                        <span class='green'></span>
-                                    </div>
-                            </label>
-                            </div>
-                            </div>
-                            <div class="pillow-form-item front-form headrest-form dependent">
-                                <label for="pillow-font-advanced-front">Шрифт: </label>
-                                <select id="pillow-font-advanced-front">
-                                    <option>Простой</option>
-                                    <option>Наклонный</option>
-                                    <option>Жирный</option>
-                                </select>
-                            </div>
-                            </div>
-                            <div class='pillow-form-item item-gosnum front-form'>
-                                <label for="pillow-auto-num">Гос.номер:</label>
-                                <input type='text' id="pillow-auto-num" name="pillow-auto-num" placeholder="Номер, пример 'Е 777 КХ'" maxlength="6" pattern="[А-Яа-я]{1}[0-9]{3}[А-Яа-я]{2}">
-                                <input type='text' id="pillow-auto-num-region" name="pillow-auto-num-region" placeholder="Регион, пример '77'" pattern="[0-9]{,3}"
-                                    maxlength="3">
-                                <p class="remark">*если у вас номера другой страны то укажите это в комментарии</p>
-                            </div>
-                            <div class="advanced-text-container-back">
-                                <div class='pillow-form-item back-form'>
-                                    <label for="pillow-advanced-reverse-text">Дополнительно:</label>
-                                    <input type='text' id="pillow-advanced-reverse-text" name="pillow-advanced-reverse-text" placeholder="Дополнительный текст">
+                                    <span class='green'></span>
                                 </div>
-                                <div class='pillow-form-item back-form dependent'>
-                                    <label for='pillow-color'>Цвет дополнительной надписи:</label>
-                                    <div class='pillow-color-radio-group'>
-                                        <label for='silver-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='silver-advanced-reverse' value="silver-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Серебряный</div>
-                                                    <span class='silver'></span>
-                                                </div>
-                                        </label>
-                                        <label for='gold-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='gold-advanced-reverse' value="gold-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Золотой</div>
-                                                    <span class='gold'></span>
-                                                </div>
-                                        </label>
-                                        <label for='white-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='white-advanced-reverse' value="white-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Белый</div>
-                                                    <span class='white'></span>
-                                                </div>
-                                        </label>
-                                        <label for='black-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='black-advanced-reverse' value="black-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Черный</div>
-                                                    <span class='black'></span>
-                                                </div>
-                                        </label>
-                                        <label for='red-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='red-advanced-reverse' value="red-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Красный</div>
-                                                    <span class='red'></span>
-                                                </div>
-                                        </label>
-                                        <label for='rose-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='rose-advanced-reverse' value="rose-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Розовый</div>
-                                                    <span class='rose'></span>
-                                                </div>
-                                        </label>
-                                        <label for='cyan-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='cyan-advanced-reverse' value="cyan-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Голубой</div>
-                                                    <span class='cyan'></span>
-                                                </div>
-                                        </label>
-                                        <label for='blue-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='blue-advanced-reverse' value="blue-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Синий</div>
-                                                    <span class='blue'></span>
-                                                </div>
-                                        </label>
-                                        <label for='gray-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='gray-advanced-reverse' value="gray-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Серый</div>
-                                                    <span class='gray'></span>
-                                                </div>
-                                        </label>
-                                        <label for='green-advanced-reverse'>
-                                            <input type='radio' name='pillow-advanced-reverse-color' id='green-advanced-reverse' value="green-advanced-reverse">
-                                            <div class='color-button'>
-                                                <div class="tooltip">Зеленый</div>
-                                                    <span class='green'></span>
-                                                </div>
-                                        </label>
-                                        </div>
-                                        </div>
-                                        <div class="pillow-form-item back-form dependent">
-                                            <label for="pillow-font-advanced-reverse">Шрифт: </label>
-                                            <select id="pillow-font-advanced-reverse" name="pillow-font-advanced-reverse">
-                                                <option>Простой</option>
-                                                <option>Наклонный</option>
-                                                <option>Жирный</option>
-                                            </select>
-                                        </div>
-                                        </div>
-                                        <div class='pillow-form-item headrest-form'>
-                                            <label for="pillow-color-edging">Цвет окантовки:</label>
-                                            <div class='pillow-color-radio-group'>
-                                                <label for='silver-edging'>
-                                                    <input type='radio' name='pillow-color-edging' id='silver-edging' value="silver">
-                                                    <div class='color-button'>
-                                                        <div class="tooltip">Серебряный</div>
-                                                            <span class='silver'></span>
-                                                        </div>
-                                                </label>
-                                                <label for='gold-edging'>
-                                                    <input type='radio' name='pillow-color-edging' id='gold-edging' value="gold" checked>
-                                                    <div class='color-button'>
-                                                        <div class="tooltip">Золотой</div>
-                                                            <span class='gold'></span>
-                                                        </div>
-                                                </label>
-                                                <label for='black-edging'>
-                                                    <input type='radio' name='pillow-color-edging' id='black-edging' value="black">
-                                                    <div class='color-button'>
-                                                        <div class="tooltip">Черный</div>
-                                                            <span class='black'></span>
-                                                        </div>
-                                                </label>
-                                                </div>
-                                                </div>
-                                                <div class='pillow-form-item front-form back-form headrest-form'>
-                                                    <label>Кол-во изделий: </label>
-                                                    <input type='number' name="pillow-quantity" min='1' value="1">
-                                                </div>
-                                                <div class='pillow-form-item front-form back-form headrest-form'>
-                                                    <label for="pillow-order-comment">Комментарий к заказу:</label>
-                                                    <textarea id="pillow-order-comment" name="pillow-order-comment" placeholder="Ваш комментарий..."></textarea>
-                                                </div>
-                                                <div class="pillow-form-item front-form back-form headrest-form">
-                                                    <p class="pillow-price">Ваша цена:
-                                                        <span class="pillow-current-price">
-                                                            <span id="pillow-current-price-num">1100</span>
-                                                            руб.
-                                                        </span>
-                                                    </p>
-                                                </div>
-                                                <div class="pillow-form-item front-form back-form headrest-form">
-                                                    <button type='submit'> ЗАКАЗАТЬ </button>
-                                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pillow-form-item front-form headrest-form dependent">
+                        <label for="pillow-font-advanced-front">Шрифт: </label>
+                        <select id="pillow-font-advanced-front">
+                            <option>Простой</option>
+                            <option>Наклонный</option>
+                            <option>Жирный</option>
+                        </select>
+                    </div>
+                </div>
+                <div class='pillow-form-item item-gosnum front-form'>
+                    <label for="pillow-auto-num">Гос.номер:</label>
+                    <input type='text' id="pillow-auto-num" name="pillow-auto-num" placeholder="Номер, пример 'Е 777 КХ'" maxlength="6" pattern="[А-Яа-я]{1}[0-9]{3}[А-Яа-я]{2}">
+                    <input type='text' id="pillow-auto-num-region" name="pillow-auto-num-region" placeholder="Регион, пример '77'" pattern="[0-9]{,3}"
+                        maxlength="3">
+                    <p class="remark">*если у вас номера другой страны то укажите это в комментарии</p>
+                </div>
+                <div class="advanced-text-container-back">
+                    <div class='pillow-form-item back-form'>
+                        <label for="pillow-advanced-reverse-text">Дополнительно:</label>
+                        <input type='text' id="pillow-advanced-reverse-text" name="pillow-advanced-reverse-text" placeholder="Дополнительный текст">
+                    </div>
+                    <div class='pillow-form-item back-form dependent'>
+                        <label for='pillow-color'>Цвет дополнительной надписи:</label>
+                        <div class='pillow-color-radio-group'>
+                            <label for='silver-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='silver-advanced-reverse' value="silver-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Серебряный</div>
+                                    <span class='silver'></span>
+                                </div>
+                            </label>
+                            <label for='gold-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='gold-advanced-reverse' value="gold-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Золотой</div>
+                                    <span class='gold'></span>
+                                </div>
+                            </label>
+                            <label for='white-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='white-advanced-reverse' value="white-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Белый</div>
+                                    <span class='white'></span>
+                                </div>
+                            </label>
+                            <label for='black-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='black-advanced-reverse' value="black-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Черный</div>
+                                    <span class='black'></span>
+                                </div>
+                            </label>
+                            <label for='red-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='red-advanced-reverse' value="red-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Красный</div>
+                                    <span class='red'></span>
+                                </div>
+                            </label>
+                            <label for='rose-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='rose-advanced-reverse' value="rose-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Розовый</div>
+                                    <span class='rose'></span>
+                                </div>
+                            </label>
+                            <label for='cyan-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='cyan-advanced-reverse' value="cyan-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Голубой</div>
+                                    <span class='cyan'></span>
+                                </div>
+                            </label>
+                            <label for='blue-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='blue-advanced-reverse' value="blue-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Синий</div>
+                                    <span class='blue'></span>
+                                </div>
+                            </label>
+                            <label for='gray-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='gray-advanced-reverse' value="gray-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Серый</div>
+                                    <span class='gray'></span>
+                                </div>
+                            </label>
+                            <label for='green-advanced-reverse'>
+                                <input type='radio' name='pillow-advanced-reverse-color' id='green-advanced-reverse' value="green-advanced-reverse">
+                                <div class='color-button'>
+                                    <div class="tooltip">Зеленый</div>
+                                    <span class='green'></span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pillow-form-item back-form dependent">
+                        <label for="pillow-font-advanced-reverse">Шрифт: </label>
+                        <select id="pillow-font-advanced-reverse" name="pillow-font-advanced-reverse">
+                            <option>Простой</option>
+                            <option>Наклонный</option>
+                            <option>Жирный</option>
+                        </select>
+                    </div>
+                </div>
+                <div class='pillow-form-item headrest-form'>
+                    <label for="pillow-color-edging">Цвет окантовки:</label>
+                    <div class='pillow-color-radio-group'>
+                        <label for='silver-edging'>
+                            <input type='radio' name='pillow-color-edging' id='silver-edging' value="silver">
+                            <div class='color-button'>
+                                <div class="tooltip">Серебряный</div>
+                                <span class='silver'></span>
+                            </div>
+                        </label>
+                        <label for='gold-edging'>
+                            <input type='radio' name='pillow-color-edging' id='gold-edging' value="gold" checked>
+                            <div class='color-button'>
+                                <div class="tooltip">Золотой</div>
+                                <span class='gold'></span>
+                            </div>
+                        </label>
+                        <label for='black-edging'>
+                            <input type='radio' name='pillow-color-edging' id='black-edging' value="black">
+                            <div class='color-button'>
+                                <div class="tooltip">Черный</div>
+                                <span class='black'></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class='pillow-form-item front-form back-form headrest-form'>
+                    <label>Кол-во изделий: </label>
+                    <input type='number' id="pillow-quantity" name="pillow-quantity" min='1' value="1">
+                </div>
+                <div class='pillow-form-item front-form back-form headrest-form'>
+                    <label for="pillow-order-comment">Комментарий к заказу:</label>
+                    <textarea id="pillow-order-comment" name="pillow-order-comment" placeholder="Ваш комментарий..."></textarea>
+                </div>
+                <div class="pillow-form-item front-form back-form headrest-form">
+                    <p class="pillow-price">Ваша цена:
+                        <span class="pillow-current-price">
+                            <span id="pillow-current-price-num">1100</span>
+                            руб.
+                        </span>
+                    </p>
+                </div>
+                <div class="pillow-form-item front-form back-form headrest-form">
+                    <button type='submit'> ЗАКАЗАТЬ </button>
+                </div>
             </form>
-            </div>
-            <div class="pillow-constructor-preview">
-                <p class="section-header">Выберите сторону</p>
-                <div class='pillow-preview'>
-                    <div class="pillow-preview-frontside active-side">
-                        <p class="side-header">Лицевая сторона</p>
-                        <div class="content">
-                            <div class='front-logo'>
-                                <img id='front-logo-img' src="./assets/images/logo/Безлого.png" alt="">
-                            </div>
-                            <div class='front-model'></div>
-                            <div class='front-text'></div>
-                            <div class='front-number'>
-                                <p class="front-number-text">
-                                    <span id='front-number-text-letter'>Е</span>
-                                    <span id='front-number-text-digits'>777</span>
-                                    <span id='front-number-text-letters'>КХ</span>
-                                </p>
-                                <p class="front-number-region">77</p>
-                                <img src="./assets/images/num.png">
-                            </div>
-                            <img id='pillow-front-image' src='./assets/images/autopillow/black.png'>
+        </div>
+        <div class="pillow-constructor-preview">
+            <p class="section-header">Выберите сторону</p>
+            <div class='pillow-preview'>
+                <div class="pillow-preview-frontside active-side">
+                    <p class="side-header">Лицевая сторона</p>
+                    <div class="content">
+                        <div class='front-logo'>
+                            <img id='front-logo-img' src="./assets/images/logo/Безлого.png" alt="">
                         </div>
-                    </div>
-                    <div class="pillow-preview-backside">
-                        <p class="side-header">Задняя сторона</p>
-                        <div class='back-logo'>
-                            <img id='back-logo-img' src="./assets/images/logo/Безлого.png" alt="">
+                        <div class='front-model'></div>
+                        <div class='front-text'></div>
+                        <div class='front-number'>
+                            <p class="front-number-text">
+                                <span id='front-number-text-letter'>Е</span>
+                                <span id='front-number-text-digits'>777</span>
+                                <span id='front-number-text-letters'>КХ</span>
+                            </p>
+                            <p class="front-number-region">77</p>
+                            <img src="./assets/images/num.png">
                         </div>
-                        <div class="back-text"></div>
-                        <img id='pillow-back-image' src='./assets/images/autopillow/black.png'>
+                        <img id='pillow-front-image' src='./assets/images/autopillow/black.png'>
                     </div>
                 </div>
-                <div class='headrest-preview'>
-                    <div class='headrest-logo'>
-                        <img id='headrest-logo-img' src='./assets/images/logo/Безлого.png' alt="">
+                <div class="pillow-preview-backside">
+                    <p class="side-header">Задняя сторона</p>
+                    <div class='back-logo'>
+                        <img id='back-logo-img' src="./assets/images/logo/Безлого.png" alt="">
                     </div>
-                    <p class='front-text'></p>
-                    <img id='headrest-image' src='./assets/images/autoheadrest/color-black1outline-gold.png'>
+                    <div class="back-text"></div>
+                    <img id='pillow-back-image' src='./assets/images/autopillow/black.png'>
                 </div>
             </div>
+            <div class='headrest-preview'>
+                <div class='headrest-logo'>
+                    <img id='headrest-logo-img' src='./assets/images/logo/Безлого.png' alt="">
+                </div>
+                <p class='front-text'></p>
+                <img id='headrest-image' src='./assets/images/autoheadrest/color-black1outline-gold.png'>
             </div>
-            <script src="./assets/scripts/jquery-3.3.1.min.js"></script>
-            <script src="./assets/scripts/script.js"></script>
+        </div>
+    </div>
+    <script src="./assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
 </body>
 
 </html>

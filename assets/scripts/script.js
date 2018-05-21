@@ -51,6 +51,7 @@ $(document).ready(function () {
             default:
                 break;
         }
+        calculate_price();
     });
         //-----Color change events
     $("input[name=pillow-color]").change(function () {
@@ -58,27 +59,30 @@ $(document).ready(function () {
         var new_path_headrest=$('#headrest-image').attr('src').replace(/color-[A-Za-z_-]*/,'color-'+$(this).val());
         $('#pillow-front-image, #pillow-back-image').attr('src',new_path_pillow);
         $('#headrest-image').attr('src',new_path_headrest);
-        
+        calculate_price();
     });
     $("input[name=pillow-color-edging]").change(function () {
         var new_path_headrest=$('#headrest-image').attr('src').replace(/outline-[A-Za-z_-]*/,'outline-'+$(this).val());
         $('#headrest-image').attr('src',new_path_headrest);
-        
+        calculate_price();
     });
 
     $("input[name=pillow-model-color]").change(function () {
         var current_color = colorScheme[$(this).val().replace('-model','')];
         $('.front-model').css('color', current_color);
+        calculate_price();
     });
 
     $('input[name=pillow-advanced-front-color]').change(function () {
         var current_color = colorScheme[$(this).val().replace('-advanced-front','')];
         $('.front-text').css('color', current_color);
+        calculate_price();
     });
 
     $('input[name=pillow-advanced-reverse-color]').change(function () {
         var current_color = colorScheme[$(this).val().replace('-advanced-reverse','')];
         $('.back-text').css('color', current_color);
+        calculate_price();
     });
 
 
@@ -93,6 +97,7 @@ $(document).ready(function () {
         {
             $(".model-text-container").children('.dependent-shown').removeClass('dependent-shown').addClass('dependent').hide();
         }
+        calculate_price();
     });
 
     $("#pillow-advanced-front-text").keyup(function () {
@@ -105,6 +110,7 @@ $(document).ready(function () {
         {
             $(".advanced-text-container-front").children('.dependent-shown').removeClass('dependent-shown').addClass('dependent').hide();
         }
+        calculate_price();
     });
     $("#pillow-advanced-reverse-text").keyup(function () {
         $('.back-text').text($(this).val());
@@ -116,10 +122,11 @@ $(document).ready(function () {
         {
             $(".advanced-text-container-back").children('.dependent-shown').removeClass('dependent-shown').addClass('dependent').hide();
         }
+        calculate_price();
     });
 
     $("#pillow-auto-num").keyup(function () {
-        var reg= /(^[А-Яа-я]?)(\d{0,3})([А-Яа-я]{0,2})/ig;
+        var reg= /(^[А-Яа-я]?)(\d{0,3})([А-Яа-я]{0,2})/ig; //////поправить здесь
 
         var match = $(this).val().match(reg)
         console.log(match);
@@ -138,10 +145,12 @@ $(document).ready(function () {
         var new_logo_path = $('#front-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-auto-mark-front option:selected').val().replace(/\s+/g,'')+'.png');
         $('#front-logo-img').attr('src',new_logo_path);
         $('#headrest-logo-img').attr('src',new_logo_path);
+        calculate_price();
     });
     $('select#pillow-auto-mark-reverse').change(function () {
         var new_logo_path = $('#back-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-auto-mark-reverse option:selected').val().replace(/\s+/g,'')+'.png');
         $('#back-logo-img').attr('src',new_logo_path);
+        calculate_price();
     });
     
 
@@ -197,4 +206,157 @@ function show_pillow_preview() {
 function show_headrest_preview() {
     $('.headrest-preview').show();
     $('.pillow-preview').hide();
+}
+
+function calculate_price() {
+    var pillow_type = $('select#pillow-type option:selected').val();
+    var pillow_auto_mark_front_cat = $('select#pillow-auto-mark-front option:selected').parent().attr('label');
+    var pillow_auto_mark_reverse_cat = $('select#pillow-auto-mark-reverse option:selected').parent().attr('label');
+    
+    var pillow_auto_model=$('#pillow-auto-model').val();
+    var pillow_model_color=$('input[name=pillow-model-color]').val();
+    
+    var pillow_advanced_front_text=$('#pillow-advanced-front-text').val();
+    var pillow_advanced_front_color=$('input[name=pillow-advanced-front-color]');
+    var pillow_advanced_reverse_text=$('#pillow-advanced-reverse-text').val();
+    var pillow_advanced_reverse_color=$('input[name=pillow-advanced-reverse-color]');
+
+    var quantity = $("#pillow-quantity").val();
+
+    var finish_price=0;
+
+    switch (pillow_type) {
+        case 'gosnum':
+            finish_price+=700; //подушка -500 + 200за номер
+            switch (pillow_auto_mark_front_cat) {
+                case 'Категория 1':
+                    finish_price+=100;
+                    break;
+                case 'Категория 2':
+                    finish_price+=200;
+                    break;
+                case 'Категория 3':
+                    finish_price+=300;
+                    break;
+                case 'Категория 4':
+                    finish_price+=400;
+                    break;            
+                default:
+                    break;
+            }
+            switch (pillow_auto_mark_reverse_cat) {
+                case 'Категория 1':
+                    finish_price+=100;
+                    break;
+                case 'Категория 2':
+                    finish_price+=200;
+                    break;
+                case 'Категория 3':
+                    finish_price+=300;
+                    break;
+                case 'Категория 4':
+                    finish_price+=400;
+                    break;            
+                default:
+                    break;
+            }
+
+            if (pillow_auto_model != '') {
+                finish_price+=100;
+                if(pillow_model_color == 'silver-model' || pillow_model_color == 'gold-model') 
+                    finish_price+=50;
+            }
+            if(pillow_advanced_front_text != '') {
+                finish_price+=100;
+                if(pillow_advanced_front_color == 'silver-advanced-front' || pillow_advanced_front_color == 'gold-advanced-front')
+                    finish_price+=50;
+            }
+            
+            if(pillow_advanced_reverse_text != '') {
+                finish_price+=100;
+                if(pillow_advanced_reverse_color == 'silver-advanced-reverse' || pillow_advanced_front_color == 'gold-advanced-reverse')
+                    finish_price+=50;
+            }
+            finish_price*=quantity;
+            break;
+        case 'nogosnum':
+            finish_price+=500;
+            switch (pillow_auto_mark_front_cat) {
+                case 'Категория 1':
+                    finish_price+=100;
+                    break;
+                case 'Категория 2':
+                    finish_price+=200;
+                    break;
+                case 'Категория 3':
+                    finish_price+=300;
+                    break;
+                case 'Категория 4':
+                    finish_price+=400;
+                    break;            
+                default:
+                    break;
+            }
+            switch (pillow_auto_mark_reverse_cat) {
+                case 'Категория 1':
+                    finish_price+=100;
+                    break;
+                case 'Категория 2':
+                    finish_price+=200;
+                    break;
+                case 'Категория 3':
+                    finish_price+=300;
+                    break;
+                case 'Категория 4':
+                    finish_price+=400;
+                    break;            
+                default:
+                    break;
+            }
+
+            if (pillow_auto_model != '') {
+                finish_price+=100;
+                if(pillow_model_color == 'silver-model' || pillow_model_color == 'gold-model') 
+                    finish_price+=50;
+            }
+            if(pillow_advanced_front_text != '') {
+                finish_price+=100;
+                if(pillow_advanced_front_color == 'silver-advanced-front' || pillow_advanced_front_color == 'gold-advanced-front')
+                    finish_price+=50;
+            }
+            
+            if(pillow_advanced_reverse_text != '') {
+                finish_price+=100;
+                if(pillow_advanced_reverse_color == 'silver-advanced-reverse' || pillow_advanced_front_color == 'gold-advanced-reverse')
+                    finish_price+=50;
+            }
+            finish_price*=quantity;
+            break;
+        case 'headrest':
+            finish_price+=300;
+            switch (pillow_auto_mark_front_cat) {
+                case 'Категория 1':
+                    finish_price+=100;
+                    break;
+                case 'Категория 2':
+                    finish_price+=200;
+                    break;
+                case 'Категория 3':
+                    finish_price+=300;
+                    break;
+                case 'Категория 4':
+                    finish_price+=400;
+                    break;            
+                default:
+                    break;
+            }
+            if(pillow_advanced_front_text != '') {
+                finish_price+=100;
+                if(pillow_advanced_front_color == 'silver-advanced-front' || pillow_advanced_front_color == 'gold-advanced-front')
+                    finish_price+=50;
+            }
+            finish_price*=quantity;
+            break;
+    }
+    set_price(finish_price);
 }
