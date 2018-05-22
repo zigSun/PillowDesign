@@ -126,13 +126,9 @@ $(document).ready(function () {
     });
 
     $("#pillow-auto-num").keyup(function () {
-        
-        if($(this).val().length==1 )
-            $("#front-number-text-letter").text($(this).val()[0]);
-        if($(this).val().length==4)
-            $("#front-number-text-digits").text($(this).val()[1]+$(this).val()[2]+$(this).val()[3]);
-        if($(this).val().length==6)
-            $("#front-number-text-letters").text($(this).val()[4]+$(this).val()[5]);
+        $(this).val().length>=1 ? $("#front-number-text-letter").text($(this).val()[0]):$("#front-number-text-letter").text("");
+        $(this).val().length>=4 ? $("#front-number-text-digits").text($(this).val()[1]+$(this).val()[2]+$(this).val()[3]):$("#front-number-text-digits").text(""); 
+        $(this).val().length>=6 ? $("#front-number-text-letters").text($(this).val()[4]+$(this).val()[5]) : $("#front-number-text-letters").text("");    
     });
 
     $("#pillow-auto-num-region").keyup(function () {
