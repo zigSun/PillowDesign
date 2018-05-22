@@ -290,7 +290,7 @@
                 <div class="model-text-container">
                     <div class='pillow-form-item front-form'>
                         <label for='pillow-auto-model'>Модель автомобиля:</label>
-                        <input type='text' id="pillow-auto-model" name="pillow-auto-model" placeholder="Модель, пример BMW X6">
+                        <input type='text' id="pillow-auto-model" name="pillow-auto-model" placeholder="Модель, пример BMW X6" maxlength="18">
                     </div>
                     <div class='pillow-form-item front-form dependent'>
                         <label for='pillow-model-color'>Цвет ниток модели:</label>
@@ -379,7 +379,7 @@
                 <div class="advanced-text-container-front">
                     <div class='pillow-form-item front-form headrest-form'>
                         <label for="pillow-advanced-front">Дополнительно:</label>
-                        <input type='text' name="pillow-advanced-front-text" id="pillow-advanced-front-text" placeholder="Дополнительный текст">
+                        <input type='text' name="pillow-advanced-front-text" id="pillow-advanced-front-text" placeholder="Дополнительный текст" maxlength="40">
                     </div>
                     <div class='pillow-form-item front-form headrest-form dependent'>
                         <label for='pillow-color'>Цвет дополнительной надписи:</label>
@@ -475,7 +475,7 @@
                 <div class="advanced-text-container-back">
                     <div class='pillow-form-item back-form'>
                         <label for="pillow-advanced-reverse-text">Дополнительно:</label>
-                        <input type='text' id="pillow-advanced-reverse-text" name="pillow-advanced-reverse-text" placeholder="Дополнительный текст">
+                        <input type='text' id="pillow-advanced-reverse-text" name="pillow-advanced-reverse-text" placeholder="Дополнительный текст" maxlength="40">
                     </div>
                     <div class='pillow-form-item back-form dependent'>
                         <label for='pillow-color'>Цвет дополнительной надписи:</label>
@@ -621,9 +621,9 @@
                         <div class='front-text'></div>
                         <div class='front-number'>
                             <p class="front-number-text">
-                                <span id='front-number-text-letter'>Е</span>
-                                <span id='front-number-text-digits'>777</span>
-                                <span id='front-number-text-letters'>КХ</span>
+                                <span id='front-number-text-letter'></span>
+                                <span id='front-number-text-digits'></span>
+                                <span id='front-number-text-letters'></span>
                             </p>
                             <p class="front-number-region">77</p>
                             <img src="./assets/images/num.png">
