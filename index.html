@@ -23,7 +23,7 @@
                 <div class='pillow-form-item front-form back-form headrest-form'>
                     <label for='pillow-type'>Тип изделия:</label>
                     <select id="pillow-type" name="pillow-type">
-                        <option value='gosnum'>Автоподушка с гос.номером</option>
+                        <option value='gosnum' selected>Автоподушка с гос.номером</option>
                         <option value='nogosnum'>Автоподушка без гос.номера</option>
                         <option value="headrest">Автоподголовник</option>
                     </select>
@@ -107,7 +107,7 @@
                     <label for='pillow-auto-mark-front'>Марка автомобиля:</label>
                     <select id="pillow-auto-mark-front" name="pillow-auto-mark-front">
                         <optgroup label="Категория 0">
-                            <option>Без лого</option>
+                            <option selected>Без лого</option>
                         </optgroup>
                         <optgroup label="Категория 1">
                             <option>Audi</option>
@@ -199,7 +199,7 @@
                     <label for='pillow-auto-mark-reverse'>Марка автомобиля:</label>
                     <select id="pillow-auto-mark-reverse" name="pillow-auto-mark-reverse">
                         <optgroup label="Категория 0">
-                            <option>Без лого</option>
+                            <option selected>Без лого</option>
                         </optgroup>
                         <optgroup label="Категория 1">
                             <option>Audi</option>
@@ -370,9 +370,9 @@
                     <div class="pillow-form-item front-form dependent">
                         <label for="pillow-font-model">Шрифт модели: </label>
                         <select id="pillow-font-model" name="pillow-font-model">
-                            <option>Простой</option>
-                            <option>Наклонный</option>
-                            <option>Жирный</option>
+                            <option value='normal'>Простой</option>
+                            <option value='italic'>Наклонный</option>
+                            <option value='bold'>Жирный</option>
                         </select>
                     </div>
                 </div>
@@ -458,10 +458,10 @@
                     </div>
                     <div class="pillow-form-item front-form headrest-form dependent">
                         <label for="pillow-font-advanced-front">Шрифт: </label>
-                        <select id="pillow-font-advanced-front">
-                            <option>Простой</option>
-                            <option>Наклонный</option>
-                            <option>Жирный</option>
+                        <select id="pillow-font-advanced-front" name="pillow-font-advanced-front">
+                            <option value='normal'>Простой</option>
+                            <option value='italic'>Наклонный</option>
+                            <option value='bold'>Жирный</option>
                         </select>
                     </div>
                 </div>

@@ -152,20 +152,31 @@ $(document).ready(function () {
         calculate_price();
     });
 
+    $('select#pillow-font-model').change(function () {
+        font_changer('#pillow-font-model','.front-model');
+    });
+    
+    $('select#pillow-font-advanced-front').change(function () {
+        font_changer('#pillow-font-advanced-front','.front-text');
+    });
+
+    $('select#pillow-font-advanced-reverse').change(function () {
+        font_changer('#pillow-font-advanced-reverse','.back-text');
+    });
+    
+    
     init();
     
 });
 
 function init() {
-    $("select#pillow-type [value='gosnum']").attr("selected", "selected");
-    $("select#pillow-type").trigger('change');
-
-    $("input[name='pillow-color']#black").attr('checked',true);
-
-    $("#pillow-auto-mark-front :contains('Без лого')").attr("selected", "selected");
-    $("#pillow-auto-mark-reverse :contains('Без лого')").attr("selected", "selected");
-    
-    $("input[name='pillow-model-color']#red-model").attr('checked',true);
+    $("select#pillow-type [value='gosnum']").attr("selected", "selected").trigger('change');
+    $("input[name='pillow-color']#black").prop('checked',true).trigger('change');    
+    $("input[name='pillow-model-color']#red-model").prop('checked',true).trigger('change');
+    $("select#pillow-font-model [value='bold']").attr("selected", "selected").trigger('change');
+    $("input[name='pillow-advanced-front-color']#red-advanced-front").prop('checked',true).trigger('change');
+    $("select#pillow-font-advanced-front [value='bold'").attr("selected", "selected").trigger('change');
+    $("input[name='pillow-advanced-reverse-color']#red-advanced-reverse").prop('checked',true).trigger('change');
     
 }
 
@@ -307,4 +318,23 @@ function calculate_price() {
             break;
     }
     set_price(finish_price);
+}
+
+
+function font_changer(selectID,targetClass) {
+
+    $(targetClass).css('font-weight','normal');
+    switch ($(selectID+" option:selected").text()) {
+        case 'Простой':
+            $(targetClass).css('font-style','normal');
+            break;
+        case 'Наклонный':
+            $(targetClass).css('font-style','italic');
+            break;
+        case 'Жирный':
+            $(targetClass).css('font-weight','bold');
+            break;
+        default:
+            break;
+        };
 }
