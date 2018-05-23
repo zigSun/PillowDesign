@@ -177,7 +177,7 @@ function init() {
     $("input[name='pillow-advanced-front-color']#red-advanced-front").prop('checked',true).trigger('change');
     $("select#pillow-font-advanced-front [value='bold'").attr("selected", "selected").trigger('change');
     $("input[name='pillow-advanced-reverse-color']#red-advanced-reverse").prop('checked',true).trigger('change');
-    
+
 }
 
 function get_current_price() {
@@ -322,8 +322,10 @@ function calculate_price() {
 
 
 function font_changer(selectID,targetClass) {
-
+    
+    $(targetClass).css('font-style','normal');
     $(targetClass).css('font-weight','normal');
+
     switch ($(selectID+" option:selected").text()) {
         case 'Простой':
             $(targetClass).css('font-style','normal');
