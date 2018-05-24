@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
         //-----Color change events
     $("input[name=pillow-color]").change(function () {
-        var new_path_pillow = $('#pillow-front-image, #pillow-back-image').attr('src').replace(/[A-Za-z_-]*.png/ig,$(this).val()+'.png');
+        var new_path_pillow = $('#pillow-front-image, #pillow-back-image').attr('src').replace(/([A-Za-z_-]+)(\.[A-Za-z]+)/ig,$(this).val()+'$2');
         var new_path_headrest=$('#headrest-image').attr('src').replace(/color-[A-Za-z_-]*/,'color-'+$(this).val());
         $('#pillow-front-image, #pillow-back-image').attr('src',new_path_pillow);
         $('#headrest-image').attr('src',new_path_headrest);
@@ -66,6 +66,8 @@ $(document).ready(function () {
         $('#headrest-image').attr('src',new_path_headrest);
         calculate_price();
     });
+
+
 
     $("input[name=pillow-model-color]").change(function () {
         var current_color = colorScheme[$(this).val().replace('-model','')];
