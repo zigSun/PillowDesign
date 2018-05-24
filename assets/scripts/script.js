@@ -164,6 +164,41 @@ $(document).ready(function () {
         font_changer('#pillow-font-advanced-reverse','.back-text');
     });
     
+    // $('#pillow-form').submit(function (e) {
+    //     e.preventDefault();
+    //     switch ($("select#pillow-type").val()) {
+    //         case 'gosnum':
+    //         case 'nogosnum':
+    //             html2canvas(document.querySelector(".pillow-preview")).then(canvas => {
+    //                 document.body.appendChild(canvas)
+    //             });
+    //             break;
+    //         case 'headrest':
+    //             html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
+    //                 document.body.appendChild(canvas)
+    //             });
+    //         default:
+    //             break;
+    //     }
+    // });
+    // $("button[type='submit']").click( function (e) {
+    //     e.preventDefault();
+    //     console.log('prevented1');
+    //     switch ($("select#pillow-type").val()) {
+    //         case 'gosnum':
+    //         case 'nogosnum':
+    //             html2canvas(document.querySelector(".pillow-preview")).then(canvas => {
+    //                 document.body.appendChild(canvas)
+    //             });
+    //             break;
+    //         case 'headrest':
+    //             html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
+    //                 document.body.appendChild(canvas)
+    //             });
+    //         default:
+    //             break;
+    //     }
+    // });
     
     init();
     
@@ -177,7 +212,6 @@ function init() {
     $("input[name='pillow-advanced-front-color']#red-advanced-front").prop('checked',true).trigger('change');
     $("select#pillow-font-advanced-front [value='bold'").attr("selected", "selected").trigger('change');
     $("input[name='pillow-advanced-reverse-color']#red-advanced-reverse").prop('checked',true).trigger('change');
-
 }
 
 function get_current_price() {

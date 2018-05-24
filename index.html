@@ -19,7 +19,7 @@
     <h1 class="header-text">Конструктор дизайна подушки</h1>
     <div class="container">
         <div class="pillow-constructor-form">
-            <form>
+            <form id="pillow-form">
                 <div class='pillow-form-item front-form back-form headrest-form'>
                     <label for='pillow-type'>Тип изделия:</label>
                     <select id="pillow-type" name="pillow-type">
@@ -625,7 +625,7 @@
                                 <span id='front-number-text-digits'></span>
                                 <span id='front-number-text-letters'></span>
                             </p>
-                            <p class="front-number-region">77</p>
+                            <p class="front-number-region"></p>
                             <img src="./assets/images/num.png">
                         </div>
                         <img id='pillow-front-image' src='./assets/images/autopillow/black.png'>
@@ -650,6 +650,7 @@
         </div>
     </div>
     <script src="./assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="./assets/scripts/html2canvas.min.js"></script>
     <script src="./assets/scripts/script.js"></script>
 </body>
 
