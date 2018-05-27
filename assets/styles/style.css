@@ -284,8 +284,8 @@
 }
 .logo-state-4 {
   width: 45%;
-    top: 30%;
-    left: 27%;
+  top: 30%;
+  left: 27%;
 }
 
 .headrest-logo {
@@ -373,4 +373,8 @@
 
 .color-button:hover .tooltip {
   visibility: visible;
+}
+
+.ui-draggable:hover{
+  cursor: move;
 }
