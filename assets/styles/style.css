@@ -378,3 +378,6 @@
 .ui-draggable:hover{
   cursor: move;
 }
+.copyright-footer {
+  text-align: center;
+}
