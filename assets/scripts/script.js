@@ -17,7 +17,7 @@ $(document).ready(function () {
         "rose" : "#bc8f8f",
         "gray" : "#808080",
         "green" : "#008000"
-    }
+    };
     
     //----PreviewSides Events
     $('.pillow-preview-frontside').click(function () {
@@ -42,7 +42,7 @@ $(document).ready(function () {
                 break;
             case 'nogosnum':
                 show_front_form(false); //false - not to show Gos Field
-                show_pillow_preview()
+                show_pillow_preview();
                 break;
             case 'headrest':
                 show_headrest_form();
@@ -202,6 +202,20 @@ $(document).ready(function () {
     //     }
     // });
     
+    $('.front-logo, .back-logo, .headrest-logo').click(function (e) {   
+        var item = $(this);
+        console.log(item);
+        console.log(item.hasClass('logo-state-1'));
+        if(item.hasClass('logo-state-1')) item.removeClass('logo-state-1').addClass('logo-state-2');
+        else
+        if(item.hasClass('logo-state-2')) item.removeClass('logo-state-2').addClass('logo-state-3');
+        else
+        if(item.hasClass('logo-state-3')) item.removeClass('logo-state-3').addClass('logo-state-4');
+        else
+        if(item.hasClass('logo-state-4')) item.removeClass('logo-state-4').addClass('logo-state-1'); 
+    })
+    //drag_element('.front-logo','.content');
+
     init();
     
 });
@@ -374,5 +388,44 @@ function font_changer(selectID,targetClass) {
             break;
         default:
             break;
-        };
+        }
+}
+
+function drag_element(elClass,containerClass) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    $(elClass).mousedown(function(e) {
+        dragMouseDown(e)});
+    
+    function dragMouseDown(e) {
+        // get the mouse cursor position at startup:
+        pos3 = e.offsetX;
+        pos4 = e.offsetY;
+        console.log($(elClass));
+        $(containerClass).mouseup(function (e) {
+            closeDragElement(e);
+        });
+        // call a function whenever the cursor moves:
+        $(containerClass).mousemove(function (e) {
+            elementDrag(e);
+        });
+    }
+    
+    function elementDrag(e) {
+
+        // calculate the new cursor position:
+        pos1 = pos3 - e.offsetX;
+        pos2 = pos4 - e.offsetY;
+        pos3 = e.offsetX;
+        pos4 = e.offsetY;
+        // set the element's new position:
+        $(elClass).css('top',($(elClass).position().top - pos2) + "px");
+        $(elClass).css('left',($(elClass).position().left - pos1) + "px");
+    }
+
+    function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        console.log('closeDrag');
+        $(containerClass).off('mouseup');
+        $(containerClass).off('mousemove');
+    }
 }

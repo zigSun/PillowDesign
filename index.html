@@ -19,7 +19,7 @@
     <h1 class="header-text">Конструктор дизайна подушки</h1>
     <div class="container">
         <div class="pillow-constructor-form">
-            <form id="pillow-form" action="https://formspree.io/zzigsun@gmail.com" method="POST">
+            <form id="pillow-form">
                 <div class='pillow-form-item front-form back-form headrest-form'>
                     <label for='pillow-type'>Тип изделия:</label>
                     <select id="pillow-type" name="pillow-type">
@@ -475,7 +475,8 @@
                 <div class="advanced-text-container-back">
                     <div class='pillow-form-item back-form'>
                         <label for="pillow-advanced-reverse-text">Дополнительно:</label>
-                        <input type='text' id="pillow-advanced-reverse-text" name="pillow-advanced-reverse-text" placeholder="Дополнительный текст" maxlength="40">
+                        <input type='text' id="pillow-advanced-reverse-text" name="pillow-advanced-reverse-text" placeholder="Дополнительный текст"
+                            maxlength="40">
                     </div>
                     <div class='pillow-form-item back-form dependent'>
                         <label for='pillow-color'>Цвет дополнительной надписи:</label>
@@ -598,7 +599,7 @@
                 <div class="pillow-form-item front-form back-form headrest-form">
                     <p class="pillow-price">Ваша цена:
                         <span class="pillow-current-price">
-                            <span id="pillow-current-price-num">1100</span>
+                            <span id="pillow-current-price-num" name="price">1100</span>
                             руб.
                         </span>
                     </p>
@@ -614,7 +615,7 @@
                 <div class="pillow-preview-frontside active-side">
                     <p class="side-header">Лицевая сторона</p>
                     <div class="content">
-                        <div class='front-logo'>
+                        <div class='front-logo logo-state-1'>
                             <img id='front-logo-img' src="./assets/images/logo/Безлого.png" alt="">
                         </div>
                         <div class='front-model'></div>
@@ -633,7 +634,7 @@
                 </div>
                 <div class="pillow-preview-backside">
                     <p class="side-header">Задняя сторона</p>
-                    <div class='back-logo'>
+                    <div class='back-logo logo-state-1'>
                         <img id='back-logo-img' src="./assets/images/logo/Безлого.png" alt="">
                     </div>
                     <div class="back-text"></div>
@@ -641,7 +642,7 @@
                 </div>
             </div>
             <div class='headrest-preview'>
-                <div class='headrest-logo'>
+                <div class='headrest-logo logo-state-1'>
                     <img id='headrest-logo-img' src='./assets/images/logo/Безлого.png' alt="">
                 </div>
                 <p class='front-text'></p>
