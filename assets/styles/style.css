@@ -277,6 +277,30 @@
 .color-button .green {
   background-color: #008000;
 }
+.color-button .brown {
+  background-color: #643603;
+}
+.color-button .fuscate {
+  background-color: #b7d455;
+}
+.color-button .light-purple {
+  background-color: #ad9ed1;
+}
+.color-button .purple {
+  background-color: #483871;
+}
+.color-button .lilac {
+  background-color: #803e89;
+}
+.color-button .orange {
+  background-color: #c46904;
+}
+.color-button .turquoise {
+  background-color: #53b5a4;
+}
+.color-button .yellow {
+  background-color: #dfc417;
+}
 
 .remark {
   color: red;

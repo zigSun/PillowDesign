@@ -104,9 +104,83 @@ var fontList = [
         },
     ];
 
+var logoList = [
+        { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+        { 'value' : 'AudiAUDI', 'category' : '1', 'text' : 'Audi AUDI' },
+        { 'value' : 'Buick', 'category' : '1', 'text' : 'Audi' },
+        { 'value' : 'Isuzu', 'category' : '1', 'text' : 'Isuzu' },
+        { 'value' : 'KIA2', 'category' : '1', 'text' : 'KIA 2' },
+        { 'value' : 'KIA3', 'category' : '1', 'text' : 'KIA 3' },
+        { 'value' : 'Chrysler', 'category' : '1', 'text' : 'Chrysler Pacifica' },
+        { 'value' : 'Lincoln', 'category' : '1', 'text' : 'Lincoln' },
+        { 'value' : 'Mazda', 'category' : '1', 'text' : 'Mazda' },
+        { 'value' : 'MAN', 'category' : '1', 'text' : 'MAN' },
+        { 'value' : 'Mercedes', 'category' : '1', 'text' : 'Mercedes' },
+        { 'value' : 'Opel', 'category' : '1', 'text' : 'Opel' },
+        { 'value' : 'Pontiac', 'category' : '1', 'text' : 'Pontiac' },
+        { 'value' : 'Citroen2', 'category' : '1', 'text' : 'Citroen 2' },
+        { 'value' : 'Toyota', 'category' : '1', 'text' : 'Toyota' },
+        { 'value' : 'UAZ', 'category' : '1', 'text' : 'UAZ' },
+        { 'value' : 'Haima', 'category' : '1', 'text' : 'Haima' },
+        { 'value' : 'Chery', 'category' : '1', 'text' : 'Chery' },
+        { 'value' : 'CheryCHERY', 'category' : '1', 'text' : 'Chery CHERY' },
+        { 'value' : 'Jaguar', 'category' : '1', 'text' : 'Jaguar' },
+        { 'value' : 'Bogdan', 'category' : '2', 'text' : 'Bogdan' },
+        { 'value' : 'Hover', 'category' : '2', 'text' : 'Hover' },
+        { 'value' : 'Jeep', 'category' : '2', 'text' : 'Jeep' },
+        { 'value' : 'Daewoo', 'category' : '2', 'text' : 'Daewoo' },
+        { 'value' : 'Infiniti', 'category' : '2', 'text' : 'Infiniti' },
+        { 'value' : 'KamazKAMAZ', 'category' : '2', 'text' : 'Kamaz KAMAZ' },
+        { 'value' : 'LADA', 'category' : '2', 'text' : 'LADA' },
+        { 'value' : 'Lexus', 'category' : '2', 'text' : 'Lexus' },
+        { 'value' : 'LexusLEXUS', 'category' : '2', 'text' : 'Lexus LEXUS' },
+        { 'value' : 'Lifan', 'category' : '2', 'text' : 'Lifan' },
+        { 'value' : 'Mini', 'category' : '2', 'text' : 'Mini' },
+        { 'value' : 'Mitsubishi', 'category' : '2', 'text' : 'Mitsubishi' },
+        { 'value' : 'Mitsubishi2', 'category' : '2', 'text' : 'Mitsubishi 2' },
+        { 'value' : 'Renault', 'category' : '2', 'text' : 'Renault' },
+        { 'value' : 'SsangYong', 'category' : '2', 'text' : 'SsangYong' },
+        { 'value' : 'Suzuki', 'category' : '2', 'text' : 'Suzuki' },
+        { 'value' : 'Fiat', 'category' : '2', 'text' : 'Fiat' },
+        { 'value' : 'Freightliner', 'category' : '2', 'text' : 'Freightliner' },
+        { 'value' : 'Volkswagen', 'category' : '2', 'text' : 'Volkswagen' },
+        { 'value' : 'Ford', 'category' : '2', 'text' : 'Ford' },
+        { 'value' : 'Hyundai', 'category' : '2', 'text' : 'Hyundai' },
+        { 'value' : 'Chery2', 'category' : '2', 'text' : 'Chery2' },
+        { 'value' : 'Chevrolet', 'category' : '2', 'text' : 'Chevrolet' },
+        { 'value' : 'ChevroletCHEVROLET', 'category' : '2', 'text' : 'Chevrolet CHEVROLET' },
+        { 'value' : 'BMW', 'category' : '3', 'text' : 'BMW' },
+        { 'value' : 'Volvo', 'category' : '3', 'text' : 'Volvo' },
+        { 'value' : 'GAZ', 'category' : '3', 'text' : 'GAZ' },
+        { 'value' : 'Geely', 'category' : '3', 'text' : 'Geely' },
+        { 'value' : 'Geely2', 'category' : '3', 'text' : 'Geely 2' },
+        { 'value' : 'Dodge', 'category' : '3', 'text' : 'Dodge' },
+        { 'value' : 'CadillacCADILLAC', 'category' : '3', 'text' : 'Cadillac CADILLAC' },
+        { 'value' : 'Daewoo2', 'category' : '3', 'text' : 'Daewoo 2' },
+        { 'value' : 'KIA1', 'category' : '3', 'text' : 'KIA 1' },
+        { 'value' : 'LandRover', 'category' : '3', 'text' : 'Land Rover' },
+        { 'value' : 'Nissan', 'category' : '3', 'text' : 'Peugeot' },
+        { 'value' : 'Rolls-Royce', 'category' : '3', 'text' : 'Rolls-Royce' },
+        { 'value' : 'Seat', 'category' : '3', 'text' : 'Seat' },
+        { 'value' : 'CitroenCITROEN', 'category' : '3', 'text' : 'Citroen CITROEN' },
+        { 'value' : 'FordMustang', 'category' : '3', 'text' : 'Ford Mustang' },
+        { 'value' : 'HummerH2', 'category' : '3', 'text' : 'Hummer H2' },
+        { 'value' : 'HummerH3', 'category' : '3', 'text' : 'Hummer H3' },
+        { 'value' : 'Skoda', 'category' : '3', 'text' : 'Skoda' },
+        { 'value' : 'Skoda2', 'category' : '3', 'text' : 'Skoda 2' },
+        { 'value' : 'AlfaRomeo', 'category' : '4', 'text' : 'Alfa Romeo' },
+        { 'value' : 'AlfaRomeoALFAROMEO', 'category' : '4', 'text' : 'Alfa Romeo ALFA ROMEO' },
+        { 'value' : 'Bugatti', 'category' : '4', 'text' : 'Bugatti' },
+        { 'value' : 'Porsche', 'category' : '4', 'text' : 'Porsche' },
+        { 'value' : 'Seat2', 'category' : '4', 'text' : 'Seat 2' },
+        { 'value' : 'Faw', 'category' : '4', 'text' : 'Faw' },
+        { 'value' : 'Ferrari', 'category' : '4', 'text' : 'Ferrari' },
+        { 'value' : 'Honda2', 'category' : '4', 'text' : 'Honda 2' },
+    ];
 
 
-    $(document).ready(function () {
+
+$(document).ready(function () {
     
     var colorScheme = {
         "milky" : "#e9e6e1",
@@ -338,38 +412,16 @@ var fontList = [
     
 });
 
-var logoList = [
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'AudiAudi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
-]
 function init() {
+
     selectFontFiller('#pillow-font-model');
     selectFontFiller('#pillow-font-advanced-front');
     selectFontFiller('#pillow-font-advanced-reverse');
+
+    selectLogoFiller('#pillow-auto-mark-front');
+    selectLogoFiller('#pillow-auto-mark-reverse');
+    
+
     $("select#pillow-type [value='gosnum']").attr("selected", "selected").trigger('change');
     $("input[name='pillow-color']#black").prop('checked',true).trigger('change');    
     $("input[name='pillow-model-color']#red-model").prop('checked',true).trigger('change');
@@ -379,9 +431,6 @@ function init() {
     $("input[name='pillow-advanced-reverse-color']#red-advanced-reverse").prop('checked',true).trigger('change');
 }
 
-function get_current_price() {
-    return Number($('#pillow-current-price-num').text());
-}
 function set_price(number) {
     $('#pillow-current-price-num').text(number);
 }
@@ -419,9 +468,8 @@ function show_headrest_preview() {
 
 function calculate_price() {
     var pillow_type = $('select#pillow-type option:selected').val();
-    var pillow_auto_mark_front_cat = $('select#pillow-auto-mark-front option:selected').parent().attr('label');
-    var pillow_auto_mark_reverse_cat = $('select#pillow-auto-mark-reverse option:selected').parent().attr('label');
-    
+    var pillow_auto_mark_front_cat = $('select#pillow-auto-mark-front option:selected').data('category');
+    var pillow_auto_mark_reverse_cat = $('select#pillow-auto-mark-reverse option:selected').data('category');
     var pillow_auto_model=$('#pillow-auto-model').val();
     var pillow_model_color=$('input[name=pillow-model-color]:checked').val();
     
@@ -439,39 +487,7 @@ function calculate_price() {
             finish_price+=200;
         case 'nogosnum':
             finish_price+=500;
-            switch (pillow_auto_mark_front_cat) {
-                case 'Категория 1':
-                    finish_price+=100;
-                    break;
-                case 'Категория 2':
-                    finish_price+=200;
-                    break;
-                case 'Категория 3':
-                    finish_price+=300;
-                    break;
-                case 'Категория 4':
-                    finish_price+=400;
-                    break;            
-                default:
-                    break;
-            }
-            switch (pillow_auto_mark_reverse_cat) {
-                case 'Категория 1':
-                    finish_price+=100;
-                    break;
-                case 'Категория 2':
-                    finish_price+=200;
-                    break;
-                case 'Категория 3':
-                    finish_price+=300;
-                    break;
-                case 'Категория 4':
-                    finish_price+=400;
-                    break;            
-                default:
-                    break;
-            }
-
+            finish_price+=pillow_auto_mark_front_cat*100 + pillow_auto_mark_reverse_cat*100;
             if (pillow_auto_model != '') {
                 finish_price+=100;
                 if(pillow_model_color == 'silver-model' || pillow_model_color == 'gold-model') 
@@ -492,22 +508,7 @@ function calculate_price() {
             break;
         case 'headrest':
             finish_price+=450;
-            switch (pillow_auto_mark_front_cat) {
-                case 'Категория 1':
-                    finish_price+=100;
-                    break;
-                case 'Категория 2':
-                    finish_price+=200;
-                    break;
-                case 'Категория 3':
-                    finish_price+=300;
-                    break;
-                case 'Категория 4':
-                    finish_price+=400;
-                    break;            
-                default:
-                    break;
-            }
+            finish_price+=pillow_auto_mark_front_cat*100;
             if(pillow_advanced_front_text != '') {
                 finish_price+=100;
                 if(pillow_advanced_front_color == 'silver-advanced-front' || pillow_advanced_front_color == 'gold-advanced-front')
@@ -525,12 +526,22 @@ function selectFontFiller(selectID) {
     });
 };
 
+function selectLogoFiller(selectID) {
+    logoList.sort(function(logoNameA, logoNameB) {
+        var compA = logoNameA.value.toUpperCase();
+        var compB = logoNameB.value.toUpperCase();
+        return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+    });
+    logoList.map(function (mark) {
+        $(selectID).append(`<option value=${mark.value} data-category=${mark.category}>${mark.text}</option>`);
+    });
+};
+
 function font_changer(selectID,targetClass) {
     
     var choice = $(selectID+" option:selected");
     $(targetClass).css('font-style','normal');
     $(targetClass).css('font-weight','normal');
-    console.log(`${choice.data('option')} ${choice.val()}`)
     $(targetClass).css(choice.data('option'),choice.val());
 
 }
