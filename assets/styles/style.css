@@ -18,6 +18,75 @@
   src: url("../fonts/AUTONUM.ttf");
 }
 
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro.otf");
+}
+@font-face {
+  font-family: "GothamProItalic";
+  src: url("../fonts/GothamProItalic.ttf");
+}
+@font-face {
+  font-family: "GothamProBoldItalic";
+  src: url("../fonts/GothamProBoldItalic.ttf");
+}
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold.ttf");
+}
+@font-face {
+  font-family: "SupermolotLight";
+  src: url("../fonts/SupermolotLight.ttf");
+}
+@font-face {
+  font-family: "SupermolotLightItalic";
+  src: url("../fonts/SupermolotLightItalic.ttf");
+}
+@font-face {
+  font-family: "SupermolotBold";
+  src: url("../fonts/SupermolotBold.ttf");
+}
+@font-face {
+  font-family: "SupermolotBoldItalic";
+  src: url("../fonts/SupermolotBoldItalic.ttf");
+}
+@font-face {
+  font-family: "BigNoodleTooOblique";
+  src: url("../fonts/BigNoodleTooOblique.ttf");
+}
+@font-face {
+  font-family: "Plainot";
+  src: url("../fonts/Plainot.ttf");
+}
+
+@font-face {
+  font-family: "Exo2.0";
+  src: url("../fonts/Exo2.0.otf");
+}
+
+@font-face {
+  font-family: "BehrensModern";
+  src: url("../fonts/BehrensModern.ttf");
+}
+
+@font-face {
+  font-family: "BehrensAntiqua";
+  src: url("../fonts/BehrensAntiqua.ttf");
+}
+
+@font-face {
+  font-family: "CityFlowers";
+  src: url("../fonts/CityFlowers.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway.ttf");
+}
+
+@font-face {
+  font-family: "DKKnucklebones";
+  src: url("../fonts/DKKnucklebones.otf");
+}
 .header-text {
   text-align: center;
   font-family: "SFUIDisplaySMB";

@@ -1,6 +1,108 @@
 /*
     Автор конструктора: https://vk.com/lefftolstoi
 */
+var fontList = [
+        {
+            "value": "normal",
+            "text" : 'Простой',
+            "option" : 'font-style'
+        },
+        {
+            "value": "italic",
+            "text" : 'Курсив',
+            "option" : 'font-style'
+        },
+        {
+            "value": "bold",
+            "text" : 'Жирный',
+            "option" : 'font-weight'
+        },
+        {
+            "value": 'GothamPro',
+            "text" : 'Gotham Pro',
+            "option" : 'font-family'
+        },
+        {
+            "value": "GothamProItalic",
+            "text" : 'Gotham Pro курсив',
+            "option" : 'font-family'
+        },
+        {
+            "value": "GothamProBoldItalic",
+            "text" : 'Gotham Pro жирный курсив',
+            "option" : 'font-family'
+        },
+        {
+            "value": "GothamProBold",
+            "text" : 'Gotham Pro жирный',
+            "option" : 'font-family'
+        },
+        {
+            "value": "SupermolotLight",
+            "text" : "Supermolot Light",
+            "option" : 'font-family'
+        },
+        {
+            "value": "SupermolotLightItalic",
+            "text" : "Supermolot Light курсив",
+            "option" : 'font-family'
+        },
+        {
+            "value": "SupermolotBold",
+            "text" : "Supermolot жирный",
+            "option" : 'font-family'
+        },
+        {
+            "value": "SupermolotBoldItalic",
+            "text" : "Supermolot жирный курсив",
+            "option" : 'font-family'
+        },
+        {
+            "value": "DKKnucklebones",
+            "text" : "DK Knucklebones",
+            "option" : 'font-family'
+        },
+        {
+            "value": "VoxRegular15",
+            "text" : "Vox",
+            "option" : 'font-family'
+        },
+        {
+            "value": "BigNoodleTooOblique",
+            "text" : "Big Noodle",
+            "option" : 'font-family'
+        },
+        {
+            "value": "Plainot",
+            "text" : "Plainot",
+            "option" : 'font-family'
+        },
+        {
+            "value": "Exo2.0",
+            "text" : "Exo 2.0",
+            "option" : 'font-family'
+        },
+        {
+            "value": 'BehrensModern',
+            "text" : 'Behrens Modern',
+            "option" : 'font-family'
+        },
+        {
+            "value": 'BehrensAntiqua',
+            "text" : 'Behrens  Antiqua',
+            "option" : 'font-family'
+        },
+        {
+            "value": 'CityFlowers',
+            "text" : 'City Flowers',
+            "option" : 'font-family'
+        },
+        {
+            "value": 'Raleway',
+            "text" : 'Raleway',
+            "option" : 'font-family'
+        },
+    ];
 
 $(document).ready(function () {
     
@@ -22,6 +124,7 @@ $(document).ready(function () {
         "gray" : "#808080",
         "green" : "#008000"
     };
+    
     
     //----PreviewSides Events
     $('.pillow-preview-frontside').click(function () {
@@ -225,12 +328,18 @@ $(document).ready(function () {
         }
     });
 
+    
+
 
     init();
+    //$('select').select2();
     
 });
 
 function init() {
+    selectFontFiller('#pillow-font-model');
+    selectFontFiller('#pillow-font-advanced-front');
+    selectFontFiller('#pillow-font-advanced-reverse');
     $("select#pillow-type [value='gosnum']").attr("selected", "selected").trigger('change');
     $("input[name='pillow-color']#black").prop('checked',true).trigger('change');    
     $("input[name='pillow-model-color']#red-model").prop('checked',true).trigger('change');
@@ -284,12 +393,12 @@ function calculate_price() {
     var pillow_auto_mark_reverse_cat = $('select#pillow-auto-mark-reverse option:selected').parent().attr('label');
     
     var pillow_auto_model=$('#pillow-auto-model').val();
-    var pillow_model_color=$('input[name=pillow-model-color]').val();
+    var pillow_model_color=$('input[name=pillow-model-color]:checked').val();
     
     var pillow_advanced_front_text=$('#pillow-advanced-front-text').val();
-    var pillow_advanced_front_color=$('input[name=pillow-advanced-front-color]');
+    var pillow_advanced_front_color=$('input[name=pillow-advanced-front-color]:checked').val();
     var pillow_advanced_reverse_text=$('#pillow-advanced-reverse-text').val();
-    var pillow_advanced_reverse_color=$('input[name=pillow-advanced-reverse-color]');
+    var pillow_advanced_reverse_color=$('input[name=pillow-advanced-reverse-color]:checked').val();
 
     var quantity = $("#pillow-quantity").val();
 
@@ -352,7 +461,7 @@ function calculate_price() {
             finish_price*=quantity;
             break;
         case 'headrest':
-            finish_price+=300;
+            finish_price+=450;
             switch (pillow_auto_mark_front_cat) {
                 case 'Категория 1':
                     finish_price+=100;
@@ -380,23 +489,18 @@ function calculate_price() {
     set_price(finish_price);
 }
 
+function selectFontFiller(selectID) {
+    fontList.map(function (font) {
+        $(selectID).append(`<option value=${font.value} data-option=${font.option}>${font.text}</option>`);
+    });
+};
 
 function font_changer(selectID,targetClass) {
     
+    var choice = $(selectID+" option:selected");
     $(targetClass).css('font-style','normal');
     $(targetClass).css('font-weight','normal');
+    console.log(`${choice.data('option')} ${choice.val()}`)
+    $(targetClass).css(choice.data('option'),choice.val());
 
-    switch ($(selectID+" option:selected").text()) {
-        case 'Простой':
-            $(targetClass).css('font-style','normal');
-            break;
-        case 'Наклонный':
-            $(targetClass).css('font-style','italic');
-            break;
-        case 'Жирный':
-            $(targetClass).css('font-weight','bold');
-            break;
-        default:
-            break;
-        }
 }
