@@ -104,7 +104,9 @@ var fontList = [
         },
     ];
 
-$(document).ready(function () {
+
+
+    $(document).ready(function () {
     
     var colorScheme = {
         "milky" : "#e9e6e1",
@@ -336,6 +338,34 @@ $(document).ready(function () {
     
 });
 
+var logoList = [
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'AudiAudi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+    { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
+]
 function init() {
     selectFontFiller('#pillow-font-model');
     selectFontFiller('#pillow-font-advanced-front');
