@@ -373,13 +373,14 @@ $(document).ready(function () {
             case 'gosnum':
             case 'nogosnum':
                 html2canvas(document.querySelector(".pillow-preview"),{useCORS:true}).then(canvas => {
-                    console.log(canvas);
+                    var attachment = canvas.toDataURL();
+                    console.log(attachment);
                 });
                 break;
             case 'headrest':
                 html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
-                    document.body.appendChild(canvas);
-                    console.log(canvas.toDataURL());
+                    var attachment = canvas.toDataURL();
+                    console.log(attachment);
                 });
                 break;
             default:
