@@ -78,7 +78,7 @@ var fontList = [
             "option" : 'font-family'
         },
         {
-            "value": "Exo2.0",
+            "value": "Exo20",
             "text" : "Exo 2.0",
             "option" : 'font-family'
         },
@@ -102,7 +102,7 @@ var fontList = [
             "text" : 'Raleway',
             "option" : 'font-family'
         },
-    ];
+];
 
 var logoList = [
         { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
@@ -176,31 +176,28 @@ var logoList = [
         { 'value' : 'Faw', 'category' : '4', 'text' : 'Faw' },
         { 'value' : 'Ferrari', 'category' : '4', 'text' : 'Ferrari' },
         { 'value' : 'Honda2', 'category' : '4', 'text' : 'Honda 2' },
-    ];
+];
 
-
+var colorScheme = {
+    "milky" : "#e9e6e1",
+    "black" : "#000000",
+    "red"   : "#e82b00",
+    "ruby"  : "#861f1c",
+    "cyan"  : "#559ffd",
+    "blue"  : "#141cfd",
+    "light-gray" : "#dcdcdc",
+    "dark-gray" : "#383a39",
+    "light-beige" : "#e6dfca",
+    "dark-beige" : "#9d7f5c",
+    "silver" : "#c0c0c0",
+    "gold" : "#ffd700",
+    "white" : "#ffffff",
+    "rose" : "#bc8f8f",
+    "gray" : "#808080",
+    "green" : "#008000"
+};
 
 $(document).ready(function () {
-    
-    var colorScheme = {
-        "milky" : "#e9e6e1",
-        "black" : "#000000",
-        "red"   : "#e82b00",
-        "ruby"  : "#861f1c",
-        "cyan"  : "#559ffd",
-        "blue"  : "#141cfd",
-        "light-gray" : "#dcdcdc",
-        "dark-gray" : "#383a39",
-        "light-beige" : "#e6dfca",
-        "dark-beige" : "#9d7f5c",
-        "silver" : "#c0c0c0",
-        "gold" : "#ffd700",
-        "white" : "#ffffff",
-        "rose" : "#bc8f8f",
-        "gray" : "#808080",
-        "green" : "#008000"
-    };
-    
     
     //----PreviewSides Events
     $('.pillow-preview-frontside').click(function () {
@@ -253,19 +250,19 @@ $(document).ready(function () {
 
 
     $("input[name=pillow-model-color]").change(function () {
-        var current_color = colorScheme[$(this).val().replace('-model','')];
+        var current_color = colorScheme[$(this).val()];
         $('.front-model').css('color', current_color);
         calculate_price();
     });
 
     $('input[name=pillow-advanced-front-color]').change(function () {
-        var current_color = colorScheme[$(this).val().replace('-advanced-front','')];
+        var current_color = colorScheme[$(this).val()];
         $('.front-text').css('color', current_color);
         calculate_price();
     });
 
-    $('input[name=pillow-advanced-reverse-color]').change(function () {
-        var current_color = colorScheme[$(this).val().replace('-advanced-reverse','')];
+    $('input[name=pillow-advanced-back-color]').change(function () {
+        var current_color = colorScheme[$(this).val()];
         $('.back-text').css('color', current_color);
         calculate_price();
     });
@@ -297,7 +294,7 @@ $(document).ready(function () {
         }
         calculate_price();
     });
-    $("#pillow-advanced-reverse-text").keyup(function () {
+    $("#pillow-advanced-back-text").keyup(function () {
         $('.back-text').text($(this).val());
         if($(this).val()!='')
         {
@@ -321,14 +318,14 @@ $(document).ready(function () {
         $(".front-number-region").text($(this).val());
     });
     
-    $('select#pillow-auto-mark-front').change(function () {
-        var new_logo_path = $('#front-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-auto-mark-front option:selected').val().replace(/\s+/g,'')+'.png');
+    $('select#pillow-mark-front').change(function () {
+        var new_logo_path = $('#front-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-mark-front option:selected').val().replace(/\s+/g,'')+'.png');
         $('#front-logo-img').attr('src',new_logo_path);
         $('#headrest-logo-img').attr('src',new_logo_path);
         calculate_price();
     });
-    $('select#pillow-auto-mark-reverse').change(function () {
-        var new_logo_path = $('#back-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-auto-mark-reverse option:selected').val().replace(/\s+/g,'')+'.png');
+    $('select#pillow-auto-mark-back').change(function () {
+        var new_logo_path = $('#back-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-auto-mark-back option:selected').val().replace(/\s+/g,'')+'.png');
         $('#back-logo-img').attr('src',new_logo_path);
         calculate_price();
     });
@@ -337,73 +334,58 @@ $(document).ready(function () {
         calculate_price();
     });
 
-    $('select#pillow-font-model').change(function () {
-        font_changer('#pillow-font-model','.front-model');
+    $('select#pillow-model-font').change(function () {
+        font_changer('#pillow-model-font','.front-model');
     });
     
-    $('select#pillow-font-advanced-front').change(function () {
-        font_changer('#pillow-font-advanced-front','.front-text');
+    $('select#pillow-advanced-front-font').change(function () {
+        font_changer('#pillow-advanced-front-font','.front-text');
     });
 
-    $('select#pillow-font-advanced-reverse').change(function () {
-        font_changer('#pillow-font-advanced-reverse','.back-text');
+    $('select#s').change(function () {
+        font_changer('#pillow-advanced-back-font','.back-text');
     });
     
-    $('#order_button').click( function(event){ // лoвим клик пo ссылки с id="go"
-		event.preventDefault(); // выключaем стaндaртную рoль элементa
-		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
-		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+    $('#order_button').click( function(event){ 
+		event.preventDefault();
+		$('#overlay').fadeIn(400,
+		    function() {
 				$('#modal') 
-					.css('display', 'flex') // убирaем у мoдaльнoгo oкнa display: none;
-					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+					.css('display', 'flex')
+					.animate({opacity: 1, top: '50%'}, 200); 
 		});
 	});
-	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
-	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+
+	$('#modal_close, #overlay').click( function(){ 
 		$('#modal')
-			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-				function(){ // пoсле aнимaции
-					$(this).css('display', 'none'); // делaем ему display: none;
-					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+			.animate({opacity: 0, top: '45%'}, 200,
+				function(){
+					$(this).css('display', 'none'); 
+					$('#overlay').fadeOut(400);
 				}
 			);
 	});
 
-    // $('#pillow-form').submit(function (e) {
-    //     e.preventDefault();
-    //     switch ($("select#pillow-type").val()) {
-    //         case 'gosnum':
-    //         case 'nogosnum':
-    //             html2canvas(document.querySelector(".pillow-preview")).then(canvas => {
-    //                 document.body.appendChild(canvas)
-    //             });
-    //             break;
-    //         case 'headrest':
-    //             html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
-    //                 document.body.appendChild(canvas)
-    //             });
-    //         default:
-    //             break;
-    //     }
-    // });
-    // $("button[type='submit']").click( function (e) {
-    //     e.preventDefault();
-    //     console.log('prevented1');
-    //     switch ($("select#pillow-type").val()) {
-    //         case 'gosnum':
-    //         case 'nogosnum':
-    //             html2canvas(document.querySelector(".pillow-preview")).then(canvas => {
-    //                 document.body.appendChild(canvas)
-    //             });
-    //             break;
-    //         case 'headrest':
-    //             html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
-    //                 document.body.appendChild(canvas)
-    //             });
-    //         default:
-    //             break;
-    //     }
-    // });
+    $('#pillow-form').submit(function (e) {
+        e.preventDefault();
+        form_prepost_getter();
+        switch ($("select#pillow-type").val()) {
+            case 'gosnum':
+            case 'nogosnum':
+                html2canvas(document.querySelector(".pillow-preview"),{useCORS:true}).then(canvas => {
+                    console.log(canvas);
+                });
+                break;
+            case 'headrest':
+                html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
+                    document.body.appendChild(canvas);
+                    console.log(canvas.toDataURL());
+                });
+                break;
+            default:
+                break;
+        }
+    });
     
     $('.front-logo, .back-logo, .headrest-logo').click(function (e) {   
         var item = $(this);
@@ -428,27 +410,28 @@ $(document).ready(function () {
 
 
     init();
-    //$('select').select2();
+
     
 });
 
+
 function init() {
 
-    selectFontFiller('#pillow-font-model');
-    selectFontFiller('#pillow-font-advanced-front');
-    selectFontFiller('#pillow-font-advanced-reverse');
+    selectFontFiller('#pillow-model-font');
+    selectFontFiller('#pillow-advanced-front-font');
+    selectFontFiller('#pillow-advanced-back-font');
 
-    selectLogoFiller('#pillow-auto-mark-front');
-    selectLogoFiller('#pillow-auto-mark-reverse');
+    selectLogoFiller('#pillow-mark-front');
+    selectLogoFiller('#pillow-mark-back');
     
 
     $("select#pillow-type [value='gosnum']").attr("selected", "selected").trigger('change');
     $("input[name='pillow-color']#black").prop('checked',true).trigger('change');    
     $("input[name='pillow-model-color']#red-model").prop('checked',true).trigger('change');
-    $("select#pillow-font-model [value='bold']").attr("selected", "selected").trigger('change');
+    $("select#pillow-model-font [value='bold']").attr("selected", "selected").trigger('change');
     $("input[name='pillow-advanced-front-color']#red-advanced-front").prop('checked',true).trigger('change');
-    $("select#pillow-font-advanced-front [value='bold'").attr("selected", "selected").trigger('change');
-    $("input[name='pillow-advanced-reverse-color']#red-advanced-reverse").prop('checked',true).trigger('change');
+    $("select#pillow-advanced-front-font [value='bold'").attr("selected", "selected").trigger('change');
+    $("input[name='pillow-advanced-back-color']#red-advanced-back").prop('checked',true).trigger('change');
 }
 
 function set_price(number) {
@@ -480,23 +463,23 @@ function show_pillow_preview() {
     $('.pillow-preview').show();
     $('.headrest-preview').hide();
 }
+
 function show_headrest_preview() {
     $('.headrest-preview').show();
     $('.pillow-preview').hide();
 }
 
-
 function calculate_price() {
     var pillow_type = $('select#pillow-type option:selected').val();
-    var pillow_auto_mark_front_cat = $('select#pillow-auto-mark-front option:selected').data('category');
-    var pillow_auto_mark_reverse_cat = $('select#pillow-auto-mark-reverse option:selected').data('category');
+    var pillow_auto_mark_front_cat = $('select#pillow-mark-front option:selected').data('category');
+    var pillow_auto_mark_reverse_cat = $('select#pillow-mark-back option:selected').data('category');
     var pillow_auto_model=$('#pillow-auto-model').val();
     var pillow_model_color=$('input[name=pillow-model-color]:checked').val();
     
     var pillow_advanced_front_text=$('#pillow-advanced-front-text').val();
     var pillow_advanced_front_color=$('input[name=pillow-advanced-front-color]:checked').val();
-    var pillow_advanced_reverse_text=$('#pillow-advanced-reverse-text').val();
-    var pillow_advanced_reverse_color=$('input[name=pillow-advanced-reverse-color]:checked').val();
+    var pillow_advanced_reverse_text=$('#pillow-advanced-back-text').val();
+    var pillow_advanced_reverse_color=$('input[name=pillow-advanced-back-color]:checked').val();
 
     var quantity = $("#pillow-quantity").val();
 
@@ -510,18 +493,18 @@ function calculate_price() {
             finish_price+=pillow_auto_mark_front_cat*100 + pillow_auto_mark_reverse_cat*100;
             if (pillow_auto_model != '') {
                 finish_price+=100;
-                if(pillow_model_color == 'silver-model' || pillow_model_color == 'gold-model') 
+                if(pillow_model_color == 'silver' || pillow_model_color == 'gold') 
                     finish_price+=50;
             }
             if(pillow_advanced_front_text != '') {
                 finish_price+=100;
-                if(pillow_advanced_front_color == 'silver-advanced-front' || pillow_advanced_front_color == 'gold-advanced-front')
+                if(pillow_advanced_front_color == 'silver' || pillow_advanced_front_color == 'gold')
                     finish_price+=50;
             }
             
             if(pillow_advanced_reverse_text != '') {
                 finish_price+=100;
-                if(pillow_advanced_reverse_color == 'silver-advanced-reverse' || pillow_advanced_front_color == 'gold-advanced-reverse')
+                if(pillow_advanced_reverse_color == 'silver' || pillow_advanced_front_color == 'gold')
                     finish_price+=50;
             }
             finish_price*=quantity;
@@ -531,7 +514,7 @@ function calculate_price() {
             finish_price+=pillow_auto_mark_front_cat*100;
             if(pillow_advanced_front_text != '') {
                 finish_price+=100;
-                if(pillow_advanced_front_color == 'silver-advanced-front' || pillow_advanced_front_color == 'gold-advanced-front')
+                if(pillow_advanced_front_color == 'silver' || pillow_advanced_front_color == 'gold')
                     finish_price+=50;
             }
             finish_price*=quantity;
@@ -558,10 +541,44 @@ function selectLogoFiller(selectID) {
 }
 
 function font_changer(selectID,targetClass) {
-    
     var choice = $(selectID+" option:selected");
     $(targetClass).css('font-style','normal');
     $(targetClass).css('font-weight','normal');
     $(targetClass).css(choice.data('option'),choice.val());
-
 }
+
+function form_prepost_getter() {
+    
+    var fields = {
+        gosnum : ['pillow-type','pillow-color','pillow-mark-front','pillow-mark-back','pillow-auto-model',
+                        'pillow-model-color','pillow-model-font','pillow-advanced-front-text','pillow-advanced-front-color',
+                        'pillow-advanced-front-font','pillow-auto-num','pillow-auto-num-region','pillow-advanced-back-text',
+                        'pillow-advanced-back-color', 'pillow-advanced-back-font','pillow-quantity','pillow-order-comment',
+                        'customer_name', 'customer_phone'],
+        nogosnum : ['pillow-type','pillow-color','pillow-mark-front','pillow-mark-back','pillow-auto-model',
+                            'pillow-model-color','pillow-model-font','pillow-advanced-front-text','pillow-advanced-front-color',
+                            'pillow-advanced-front-font','pillow-advanced-back-text', 'pillow-advanced-back-color', 
+                            'pillow-advanced-back-font','pillow-quantity','pillow-order-comment', 'customer_name', 'customer_phone'],
+        headrest : ['pillow-type','pillow-color', 'pillow-mark-front','pillow-advanced-front-text','pillow-advanced-front-color',
+                            'pillow-advanced-front-font', 'pillow-color-edging', 'pillow-quantity', 'pillow-order-comment', 'customer_name', 
+                            'customer_phone']
+    };
+
+    var form_data = $('#pillow-form').serializeArray();
+    var pillow_type = form_data[0].value;
+    
+    var result = form_data.filter(function(field) {
+        if(fields[pillow_type].includes(field.name) && field.value != "" && field.value != "none") {
+            if((field.name == 'pillow-model-color' || field.name == 'pillow-model-font') && $('#pillow-auto-model').val() == '') 
+                return false;
+            if((field.name == 'pillow-advanced-front-color' || field.name == 'pillow-advanced-front-font') && $('#pillow-advanced-front-text').val() == '') 
+                return false;
+            if((field.name == 'pillow-advanced-back-color' || field.name == 'pillow-advanced-back-font') && $('#pillow-advanced-back-text').val() == '') 
+                return false;
+            return true;
+        }
+        return false;
+    });
+    console.log(result);
+}
+
