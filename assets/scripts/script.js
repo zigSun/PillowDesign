@@ -380,7 +380,7 @@ $(document).ready(function () {
                     "zzigsun@gmail.com",
                     "vladlisitsinfl@gmail.com",
                     "Новый заказ",
-                    `<img src="${attachment}" />`,
+                    `<img src=${attachment} />`,
                     {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'},
                     function done(message) { 
                         alert("Message sent OK");
@@ -394,7 +394,7 @@ $(document).ready(function () {
                     "zzigsun@gmail.com",
                     "vladlisitsinfl@gmail.com",
                     "Новый заказ",
-                    `<img src="${attachment}" />`,
+                    `<img src=${attachment} />`,
                     {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'},
                     function done(message) { 
                         alert("Message sent OK");
