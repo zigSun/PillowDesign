@@ -197,6 +197,35 @@ var colorScheme = {
     "green" : "#008000"
 };
 
+var translateObj = {
+    'pillow-type' : 'Тип изделия',
+    'pillow-color' : 'Цвет изделия',
+    'pillow-mark-front' : 'Логотип(лицевая сторона)',
+    'pillow-mark-back' : 'Логотип(задняя сторона)',
+    'pillow-auto-model' : 'Модель автомобиля',
+    'pillow-model-color' : 'Цвет ниток модели',
+    'pillow-model-font' : 'Шрифт модели',
+    'pillow-advanced-front-text' : 'Дополнительный текст(лицевая сторона)',
+    'pillow-advanced-front-color' : 'Цвет ниток доп.текста(лицевая сторона)',
+    'pillow-advanced-front-font' : 'Шрифт доп.текста(лицевая сторона)',
+    'pillow-auto-num' : 'Автомобильный номер',
+    'pillow-auto-num-region' : 'Автомобильный номер - регион',
+    'pillow-advanced-back-text' : 'Дополнительный текст(задняя сторона)',
+    'pillow-advanced-back-color' : 'Цвет ниток доп.текста(задняя сторона)',
+    'pillow-advanced-back-font' : 'Шрифт доп.текста(задняя сторона)',
+    'pillow-color-edging' : 'Цвет окантовки автоподголовника',
+    'pillow-quantity' : 'Количество изделий',
+    'customer_name' : 'Имя покупателя',
+    'customer_phone' : 'Телефон покупателя',
+
+    'gosnum' : 'Автоподушка с гос.номером',
+    'nogosnum' : 'Автоподушка без гос.номера',
+    'headrest' : 'Автоподголовник',
+    'normal' : 'Простой',
+    'italic' : 'Курсив',
+    'bold' : 'Жирный'
+}
+
 $(document).ready(function () {
     
     //----PreviewSides Events
@@ -211,7 +240,6 @@ $(document).ready(function () {
         $('.active-side').removeClass('active-side');
         $(this).addClass('active-side');
     });
-    
     
     //----FormChange Events 
     $('select#pillow-type').change(function () {
@@ -233,7 +261,8 @@ $(document).ready(function () {
         }
         calculate_price();
     });
-        //-----Color change events
+    
+    //-----Color change events
     $("input[name=pillow-color]").change(function () {
         var new_path_pillow = $('#pillow-front-image, #pillow-back-image').attr('src').replace(/([A-Za-z_-]+)(\.[A-Za-z]+)/ig,$(this).val()+'$2');
         var new_path_headrest=$('#headrest-image').attr('src').replace(/color-[A-Za-z_-]*/,'color-'+$(this).val());
@@ -241,13 +270,12 @@ $(document).ready(function () {
         $('#headrest-image').attr('src',new_path_headrest);
         calculate_price();
     });
+
     $("input[name=pillow-color-edging]").change(function () {
         var new_path_headrest=$('#headrest-image').attr('src').replace(/outline-[A-Za-z_-]*/,'outline-'+$(this).val());
         $('#headrest-image').attr('src',new_path_headrest);
         calculate_price();
     });
-
-
 
     $("input[name=pillow-model-color]").change(function () {
         var current_color = colorScheme[$(this).val()];
@@ -266,7 +294,6 @@ $(document).ready(function () {
         $('.back-text').css('color', current_color);
         calculate_price();
     });
-
 
         //------Text change events
     $("#pillow-auto-model").keyup(function () {
@@ -294,6 +321,7 @@ $(document).ready(function () {
         }
         calculate_price();
     });
+
     $("#pillow-advanced-back-text").keyup(function () {
         $('.back-text').text($(this).val());
         if($(this).val()!='')
@@ -324,8 +352,9 @@ $(document).ready(function () {
         $('#headrest-logo-img').attr('src',new_logo_path);
         calculate_price();
     });
-    $('select#pillow-auto-mark-back').change(function () {
-        var new_logo_path = $('#back-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-auto-mark-back option:selected').val().replace(/\s+/g,'')+'.png');
+
+    $('select#pillow-mark-back').change(function () {
+        var new_logo_path = $('#back-logo-img').attr('src').replace(/[А-Яа-яA-Za-z0-9-]+.png$/i, $('select#pillow-mark-back option:selected').val().replace(/\s+/g,'')+'.png');
         $('#back-logo-img').attr('src',new_logo_path);
         calculate_price();
     });
@@ -368,7 +397,7 @@ $(document).ready(function () {
 
     $('#pillow-form').submit(function (e) {
         e.preventDefault();
-        form_prepost_getter();
+        var body = form_prepost();
         var attachment;
         switch ($("select#pillow-type").val()) {
             case 'gosnum':
@@ -379,11 +408,8 @@ $(document).ready(function () {
                         "zzigsun@gmail.com",
                         "vladlisitsinfl@gmail.com",
                         "Новый заказ",
-                        `<img src=${attachment} />`,
-                        {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'},
-                        function done(message) { 
-                            alert("Message sent OK");
-                        });
+                        `${body} \n <img src=${attachment} />`,
+                        {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});  
                 });
                 break;
             case 'headrest':
@@ -393,11 +419,8 @@ $(document).ready(function () {
                         "zzigsun@gmail.com",
                         "vladlisitsinfl@gmail.com",
                         "Новый заказ",
-                        `<img src=${attachment} />`,
-                        {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'},
-                        function done(message) { 
-                            alert("Message sent OK");
-                        });
+                        `${body} \n <img src=${attachment} />`,
+                        {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});
                 });
                 
                 break;
@@ -566,7 +589,7 @@ function font_changer(selectID,targetClass) {
     $(targetClass).css(choice.data('option'),choice.val());
 }
 
-function form_prepost_getter() {
+function form_prepost() {
     
     var fields = {
         gosnum : ['pillow-type','pillow-color','pillow-mark-front','pillow-mark-back','pillow-auto-model',
@@ -586,7 +609,7 @@ function form_prepost_getter() {
     var form_data = $('#pillow-form').serializeArray();
     var pillow_type = form_data[0].value;
     
-    var result = form_data.filter(function(field) {
+    var filtered_fields = form_data.filter(function(field) {
         if(fields[pillow_type].includes(field.name) && field.value != "" && field.value != "none") {
             if((field.name == 'pillow-model-color' || field.name == 'pillow-model-font') && $('#pillow-auto-model').val() == '') 
                 return false;
@@ -596,8 +619,16 @@ function form_prepost_getter() {
                 return false;
             return true;
         }
-        return false;
     });
-    console.log(result);
+
+    var result_msg="";
+    
+    filtered_fields.map(function(item){
+        var translateName = translateObj.hasOwnProperty(item.name) ? translateObj[item.name] : item.name;
+        var translateVal = translateObj.hasOwnProperty(item.value) ? translateObj[item.value] : item.value;
+        result_msg+=`${translateName} : ${translateVal} \n`;
+    });
+
+    return result_msg;
 }
 
