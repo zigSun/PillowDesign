@@ -411,6 +411,8 @@ $(document).ready(function () {
                         `${body} <br/> <img src=${attachment} />`,
                         {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});  
                 });
+                $('.customer-info').hide();
+                $('.congrats').show();
                 break;
             case 'headrest':
                 html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
@@ -422,7 +424,8 @@ $(document).ready(function () {
                         `${body} <br/> <img src=${attachment} />`,
                         {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});
                 });
-                
+                $('.customer-info').hide();
+                $('.congrats').show();
                 break;
             default:
                 break;

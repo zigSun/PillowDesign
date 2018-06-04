@@ -367,7 +367,7 @@
                 <div class='pillow-form-item item-gosnum front-form'>
                     <label for="pillow-auto-num">Гос.номер:</label>
                     <input type='text' id="pillow-auto-num" name="pillow-auto-num" placeholder="Номер, пример 'Е 777 КХ'" maxlength="6" pattern="[А-Яа-я]{1}[0-9]{3}[А-Яа-я]{2}">
-                    <input type='text' id="pillow-auto-num-region" name="pillow-auto-num-region" placeholder="Регион, пример '77'" pattern="[0-9]{,3}"
+                    <input type='text' id="pillow-auto-num-region" name="pillow-auto-num-region" placeholder="Регион, пример '77'" pattern="[0-9]{0,3}"
                         maxlength="3">
                     <p class="remark">*если у вас номера другой страны то укажите это в комментарии</p>
                 </div>
@@ -554,10 +554,13 @@
     </div>
     <div id="modal">
         <span id="modal_close">X</span>
-        <h1 class='header-text'>Введите контактные данные</h1>
-        <input type='text' form='pillow-form' name='customer_name' placeholder="Ваше имя..." required>
-        <input type='text' form='pillow-form' name='customer_phone' placeholder="Ваш номер телефона..." required>
-        <button type='submit' form='pillow-form'>Подтвердить заказ</button>
+        <div class='customer-info'>
+            <h1 class='header-text'>Введите контактные данные</h1>
+            <input type='text' form='pillow-form' name='customer_name' placeholder="Ваше имя..." required>
+            <input type='text' form='pillow-form' name='customer_phone' placeholder="Ваш номер телефона..." required>
+            <button type='submit' form='pillow-form'>Подтвердить заказ</button>
+        </div>
+        <h1 class='header-text congrats' style='display:none'>Спасибо за заказ</h1>
     </div>
     <div id="overlay"></div>
     <div class='copyright-footer'>Constructor developed by lefftolstoi - <a href="https://vk.com/lefftolstoi"><i class="fab fa-vk"></i></a> <a href="https://t.me/lefftolstoi"><i class="fab fa-telegram"></i></a></div>
