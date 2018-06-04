@@ -408,7 +408,7 @@ $(document).ready(function () {
                         "zzigsun@gmail.com",
                         "vladlisitsinfl@gmail.com",
                         "Новый заказ",
-                        `${body} \n <img src=${attachment} />`,
+                        `${body} <br/> <img src=${attachment} />`,
                         {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});  
                 });
                 break;
@@ -419,7 +419,7 @@ $(document).ready(function () {
                         "zzigsun@gmail.com",
                         "vladlisitsinfl@gmail.com",
                         "Новый заказ",
-                        `${body} \n <img src=${attachment} />`,
+                        `${body} <br/> <img src=${attachment} />`,
                         {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});
                 });
                 
@@ -626,7 +626,7 @@ function form_prepost() {
     filtered_fields.map(function(item){
         var translateName = translateObj.hasOwnProperty(item.name) ? translateObj[item.name] : item.name;
         var translateVal = translateObj.hasOwnProperty(item.value) ? translateObj[item.value] : item.value;
-        result_msg+=`${translateName} : ${translateVal} \n`;
+        result_msg+=`<b>${translateName}</b> : ${translateVal} <br/>`;
     });
 
     return result_msg;
