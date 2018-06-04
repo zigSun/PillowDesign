@@ -369,19 +369,36 @@ $(document).ready(function () {
     $('#pillow-form').submit(function (e) {
         e.preventDefault();
         form_prepost_getter();
+        var attachment;
         switch ($("select#pillow-type").val()) {
             case 'gosnum':
             case 'nogosnum':
                 html2canvas(document.querySelector(".pillow-preview"),{useCORS:true}).then(canvas => {
-                    var attachment = canvas.toDataURL();
-                    console.log(attachment);
+                    attachment = canvas.toDataURL();
                 });
+                Email.send(
+                    "zzigsun@gmail.com",
+                    "vladlisitsinfl@gmail.com",
+                    "Новый заказ",
+                    `<img src="${attachment}" />`,
+                    {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'},
+                    function done(message) { 
+                        alert("Message sent OK");
+                    });
                 break;
             case 'headrest':
                 html2canvas(document.querySelector(".headrest-preview")).then(canvas => {
-                    var attachment = canvas.toDataURL();
-                    console.log(attachment);
+                    attachment = canvas.toDataURL();
                 });
+                Email.send(
+                    "zzigsun@gmail.com",
+                    "vladlisitsinfl@gmail.com",
+                    "Новый заказ",
+                    `<img src="${attachment}" />`,
+                    {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'},
+                    function done(message) { 
+                        alert("Message sent OK");
+                    });
                 break;
             default:
                 break;
