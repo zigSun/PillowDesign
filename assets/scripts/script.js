@@ -336,9 +336,43 @@ $(document).ready(function () {
     });
 
     $("#pillow-auto-num").keyup(function () {
-        $(this).val().length>=1 ? $("#front-number-text-letter").text($(this).val()[0]):$("#front-number-text-letter").text("");
-        $(this).val().length>=4 ? $("#front-number-text-digits").text($(this).val()[1]+$(this).val()[2]+$(this).val()[3]):$("#front-number-text-digits").text(""); 
-        $(this).val().length>=6 ? $("#front-number-text-letters").text($(this).val()[4]+$(this).val()[5]) : $("#front-number-text-letters").text("");    
+        var current_input = $(this);
+        
+        var regexp_first_letter = /^[^A-Za-zА-Яа-я]{1}/i;
+        var regexp_digits = /\D+/i;
+        var regexp_last_letters = /[^A-Za-zА-Яа-я]{1,2}$/i; 
+        
+        var first_letter = $(this).val().substring(0,1);
+        var digits = $(this).val().substring(1,4);
+        var last_letters = $(this).val().substring(4);
+
+        if(regexp_first_letter.test(first_letter)){
+            first_letter=first_letter.slice(0,-1);
+            $("#front-number-text-letter").text("");
+            current_input.val(current_input.val().slice(0,-1));
+        } else {
+            $("#front-number-text-letter").text(first_letter);
+        }
+
+        if(regexp_digits.test(digits)){
+            if(current_input.val().length > 1) {
+                digits = digits.slice(0,-1);
+                $("#front-number-text-digits").text(digits);
+                current_input.val(current_input.val().slice(0,-1));
+            }
+        } else {
+            $("#front-number-text-digits").text(digits);
+        }
+
+        if(regexp_last_letters.test(last_letters)){
+            if(current_input.val().length >= 5) {
+                last_letters = last_letters.slice(0,-1);
+                $("#front-number-text-letters").text(last_letters);
+                current_input.val(current_input.val().slice(0,-1));
+            }
+        } else {
+            $("#front-number-text-letters").text(last_letters);
+        }
     });
 
     $("#pillow-auto-num-region").keyup(function () {

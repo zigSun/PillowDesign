@@ -1,86 +1,58 @@
-pillow-type=gosnum
-pillow-color=black
-pillow-auto-mark-front=none
-pillow-auto-mark-back=none
-pillow-auto-model=
-pillow-model-color=red-model
-pillow-font-model=bold
-pillow-advanced-front-text=
-pillow-advanced-front-color=red-advanced-front
-pillow-font-advanced-front=bold&pillow-auto-num=&pillow-auto-num-region=&pillow-advanced-back-text=&pillow-advanced-back-color=red-advanced-back&pillow-font-advanced-back=normal&pillow-color-edging=gold&pillow-quantity=1&pillow-order-comment=&customer_name=&customer_phone=
-
---------------
-'pillow-type=gosnum', (gosnum nogosnum headrest)
-'pillow-color=black', (gosnum nogosnum headrest)
-'pillow-auto-mark-front=none', (gosnum nogosnum headrest)
-'pillow-auto-mark-back=none', (gosnum nogosnum)
-'pillow-auto-model=', (gosnum nogosnum headrest)
-    'pillow-model-color=red-model', (gosnum nogosnum headrest)
-    'pillow-font-model=bold', (gosnum nogosnum)
-'pillow-advanced-front-text=', (gosnum nogosnum headrest)
-    'pillow-advanced-front-color=red-advanced-front', (gosnum nogosnum headrest)
-    'pillow-font-advanced-front=bold', (gosnum nogosnum headrest)
-'pillow-auto-num=', (gosnum )
-'pillow-auto-num-region=',(gosnum)
-'pillow-advanced-back-text=', (gosnum nogosnum)
-    'pillow-advanced-back-color=red-advanced-back', (gosnum nogosnum)
-    'pillow-font-advanced-back=normal', (gosnum nogosnum)
-'pillow-color-edging=gold', (headrest)
-'pillow-quantity=1', (gosnum nogosnum headrest)
-'pillow-order-comment=', (gosnum nogosnum headrest)
-'customer_name=', (gosnum nogosnum headrest)
-'customer_phone=' (gosnum nogosnum headrest)
-
-
-
-// pillow-type : gosnum
-'pillow-color=black'
-'pillow-mark-front=none'
-'pillow-mark-back=none'
-'pillow-auto-model='
-    'pillow-model-color=red-model'
-    'pillow-font-model=bold'
-'pillow-advanced-front-text='
-    'pillow-advanced-front-color=red-advanced-front'
-    'pillow-font-advanced-front=bold'
-'pillow-auto-num='
-'pillow-auto-num-region='
-'pillow-advanced-back-text='
-    'pillow-advanced-back-color=red-advanced-back', 
-    'pillow-font-advanced-back=normal',
-'pillow-quantity=1'
-'pillow-order-comment=',
-'customer_name=',
-'customer_phone=' 
-
-// pillow-type : nogosnum
-'pillow-color=black'
-'pillow-mark-front=none'
-'pillow-mark-back=none'
-'pillow-auto-model='
-    'pillow-model-color=red-model'
-    'pillow-font-model=bold'
-'pillow-advanced-front-text='
-    'pillow-advanced-front-color=red-advanced-front'
-    'pillow-font-advanced-front=bold'
-'pillow-advanced-back-text='
-    'pillow-advanced-back-color=red-advanced-back', 
-    'pillow-font-advanced-back=normal',
-'pillow-quantity=1'
-'pillow-order-comment=',
-'customer_name=',
-'customer_phone=' 
-
-// pillow-type : headrest 
-
-'pillow-color=black',
-'pillow-auto-mark-front=none', 
-'pillow-advanced-front-text=', 
-    'pillow-advanced-front-color=red-advanced-front', 
-    'pillow-font-advanced-front=bold',
-'pillow-color-edging=gold', 
-'pillow-quantity=1',
-'pillow-order-comment=', 
-'customer_name=', 
-'customer_phone='
-
+{name: "pillow-type", value: "gosnum"}
+1
+:
+{name: "pillow-color", value: "black"}
+2
+:
+{name: "pillow-mark-front", value: "none"}
+3
+:
+{name: "pillow-mark-back", value: "none"}
+4
+:
+{name: "pillow-auto-model", value: ""}
+5
+:
+{name: "pillow-model-color", value: "red"}
+6
+:
+{name: "pillow-model-font", value: "bold"}
+7
+:
+{name: "pillow-advanced-front-text", value: ""}
+8
+:
+{name: "pillow-advanced-front-color", value: "red"}
+9
+:
+{name: "pillow-advanced-front-font", value: "bold"}
+10
+:
+{name: "pillow-auto-num", value: ""}
+11
+:
+{name: "pillow-auto-num-region", value: ""}
+12
+:
+{name: "pillow-advanced-back-text", value: ""}
+13
+:
+{name: "pillow-advanced-back-color", value: "red"}
+14
+:
+{name: "pillow-advanced-back-font", value: "normal"}
+15
+:
+{name: "pillow-color-edging", value: "gold"}
+16
+:
+{name: "pillow-quantity", value: "1"}
+17
+:
+{name: "pillow-order-comment", value: ""}
+18
+:
+{name: "customer_name", value: "Владислав Валерьевич Лисицын"}
+19
+:
+{name: "customer_phone", value: "89627297898"}
