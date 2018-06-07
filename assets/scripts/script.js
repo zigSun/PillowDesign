@@ -107,7 +107,7 @@ var fontList = [
 var logoList = [
         { 'value' : 'Audi', 'category' : '1', 'text' : 'Audi' },
         { 'value' : 'AudiAUDI', 'category' : '1', 'text' : 'Audi AUDI' },
-        { 'value' : 'Buick', 'category' : '1', 'text' : 'Audi' },
+        { 'value' : 'Buick', 'category' : '1', 'text' : 'Buick' },
         { 'value' : 'Isuzu', 'category' : '1', 'text' : 'Isuzu' },
         { 'value' : 'KIA2', 'category' : '1', 'text' : 'KIA 2' },
         { 'value' : 'KIA3', 'category' : '1', 'text' : 'KIA 3' },
