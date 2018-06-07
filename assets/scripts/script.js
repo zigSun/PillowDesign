@@ -441,7 +441,7 @@ $(document).ready(function () {
                     attachment = canvas.toDataURL();
                     Email.send(
                         "zzigsun@gmail.com",
-                        "vladlisitsinfl@gmail.com",
+                        "vladlisitsin1414@mail.ru",
                         "Новый заказ",
                         `${body} <br/> <img src=${attachment} />`,
                         {token : 'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'});  
