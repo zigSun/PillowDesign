@@ -406,7 +406,7 @@ $(document).ready(function () {
         font_changer('#pillow-advanced-front-font','.front-text');
     });
 
-    $('select#s').change(function () {
+    $('select#pillow-advanced-back-font').change(function () {
         font_changer('#pillow-advanced-back-font','.back-text');
     });
     
