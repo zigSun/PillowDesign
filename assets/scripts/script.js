@@ -310,7 +310,8 @@ $(document).ready(function () {
     });
 
     $("#pillow-advanced-front-text").keyup(function () {
-        $('.front-text').text($(this).val());
+        
+        $('.front-text').html($(this).val().replace(/\r?\n/g,'<br/>'));
         if($(this).val()!='')
         {
             $(".advanced-text-container-front").children('.dependent').removeClass('dependent').addClass('dependent-shown').show();
@@ -323,7 +324,7 @@ $(document).ready(function () {
     });
 
     $("#pillow-advanced-back-text").keyup(function () {
-        $('.back-text').text($(this).val());
+        $('.back-text').html($(this).val().replace(/\r?\n/g,'<br/>'));
         if($(this).val()!='')
         {
             $(".advanced-text-container-back").children('.dependent').removeClass('dependent').addClass('dependent-shown').show();
