@@ -1,0 +1,26 @@
+<div id="modal">
+    <h1 class="header-text">Осталось совсем чуть-чуть ;)</h1>
+    <div class='modal-content'>
+        <div class="pillow-image">
+            <img src="./images/modal_background.png">
+        </div>
+        <div class='customer-info'>
+            <h1 class='header-text'>Заполните Ваши данные: </h1>
+            <input type='text' form='pillow-form' name='customer_name' placeholder="Ваше имя*" required>
+            <input type='text' id='telephone' form='pillow-form' name='customer_phone' placeholder="Ваш телефон*" required>
+            <input type='email' form='pillow-form' name='customer_email' placeholder="Ваш e-mail..." required>
+            <button type='submit' form='pillow-form'>Подтвердить заказ</button>
+        </div>
+        <div class='congratutlations' style='display:none'>
+            <p class="header-text">Спасибо за заказ!</p>
+            <button disabled>Отправлено</button>
+            <button id='save_pic'>Скачать эскиз</button>
+        </div>
+    </div>
+    <div class="caution">
+        <span class="remark"> ВНИМАНИЕ: </span>
+        Созданный Вами дизайн будет дополнительно обработан в специальной программе для загрузки в вышивальную машину. Перед началом вышивки, обработанный дизайн будет дополнительно с Вами согласован.
+        
+    </div>
+</div>
+<div id="overlay"></div>

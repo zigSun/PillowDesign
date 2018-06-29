@@ -1,0 +1,30 @@
+$fonts_path: "../fonts";
+
+$fonts_import: (
+  ("SFUIDisplaySMB", "#{$fonts_path}/SFUIDisplay-Semibold.ttf"),
+  ("SFUIDisplayReg", "#{$fonts_path}/SFUIDisplay-Regular.ttf"),
+  ("SFUIDisplayLight", "#{$fonts_path}/SFUIDisplay-Light.ttf"),
+  ("AutoNumber", "#{$fonts_path}/AUTONUM.ttf"),
+  ("GothamPro", "#{$fonts_path}/GothamPro.otf"),
+  ("GothamProItalic", "#{$fonts_path}/GothamProItalic.ttf"),
+  ("GothamProBoldItalic", "#{$fonts_path}/GothamProBoldItalic.ttf"),
+  ("GothamProBold", "#{$fonts_path}/GothamProBold.ttf"),
+  ("SupermolotLight", "#{$fonts_path}/SupermolotLight.ttf"),
+  ("SupermolotBold", "#{$fonts_path}/SupermolotBold.ttf"),
+  ("SupermolotBoldItalic", "#{$fonts_path}/SupermolotBoldItalic.ttf"),
+  ("BigNoodleTooOblique", "#{$fonts_path}/BigNoodleTooOblique.ttf"),
+  ("Plainot", "#{$fonts_path}/Plainot.ttf"),
+  ("Exo20", "#{$fonts_path}/Exo20.otf"),
+  ("BehrensModern", "#{$fonts_path}/BehrensModern.ttf"),
+  ("BehrensAntiqua", "#{$fonts_path}/BehrensAntiqua.ttf"),
+  ("CityFlowers", "#{$fonts_path}/CityFlowers.ttf"),
+  ("Raleway", "#{$fonts_path}/Raleway.ttf"),
+  ("DKKnucklebones", "#{$fonts_path}/DKKnucklebones.otf")
+);
+
+@each $font in $fonts_import {
+  @font-face {
+    font-family: nth($font, 1);
+    src: url(nth($font, 2));
+  }
+}
