@@ -74,12 +74,18 @@
   font-family: "DKKnucklebones";
   src: url("../fonts/DKKnucklebones.otf"); }
 
+@font-face {
+  font-family: "NextArt";
+  src: url("../fonts/NextArt.otf"); }
+
 html {
   overflow-x: hidden; }
 
 .header-text {
   text-align: center;
   font-family: "SFUIDisplaySMB"; }
+  .header-text.modal-text {
+    font-family: "NextArt"; }
 
 .container {
   display: flex;
@@ -418,10 +424,16 @@ html {
   #modal .modal-content {
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     @media (max-width: 1200px) {
       #modal .modal-content {
         flex-direction: column; } }
+  #modal .customer-info {
+    max-width: 400px; }
+
+.caution {
+  font-family: 'SFUIDisplayReg'; }
 
 #overlay {
   z-index: 3;
