@@ -12,10 +12,9 @@
     <title>pillow design</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="stylesheet" href="./assets/styles/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/styles/select2.min.css">
 </head>
 
 <body>
@@ -502,18 +501,19 @@
                     </p>
                 </div>
                 <div class="pillow-form-item front-form back-form headrest-form">
-                    <button id="order_button" type='submit'> ЗАКАЗАТЬ </button>
+                    <button id="order_button"> ЗАКАЗАТЬ </button>
                 </div>
             </form>
         </div>
         <div class="pillow-constructor-preview">
             <p class="section-header">Выберите сторону</p>
             <div class='pillow-preview'>
+                
                 <div class="pillow-preview-frontside active-side">
                     <p class="side-header">Лицевая сторона</p>
                     <div class="content">
                         <div class='front-logo logo-state-1'>
-                            <img id='front-logo-img' src="./assets/images/logo/Безлого.png" alt="">
+                            <img id='front-logo-img' src="./images/logo/Безлого.png" alt="">
                         </div>
                         <div class='front-model'></div>
                         <div class='front-text'></div>
@@ -524,52 +524,63 @@
                                 <span id='front-number-text-letters'></span>
                             </p>
                             <p class="front-number-region"></p>
-                            <img src="./assets/images/num.png">
+                            <img src="./images/num.png">
                         </div>
-                        <img id='pillow-front-image' src='./assets/images/autopillow/black.png'>
+                        <img id='pillow-front-image' src='./images/autopillow/black.png'>
                     </div>
                 </div>
+        
                 <div class="pillow-preview-backside">
                     <p class="side-header">Задняя сторона</p>
                     <div class="content">
                         <div class='back-logo logo-state-1'>
-                            <img id='back-logo-img' src="./assets/images/logo/Безлого.png" alt="">
+                            <img id='back-logo-img' src="./images/logo/Безлого.png" alt="">
                         </div>
                         <div class="back-text"></div>
-                        <img id='pillow-back-image' src='./assets/images/autopillow/black.png'>
+                        <img id='pillow-back-image' src='./images/autopillow/black.png'>
                     </div>
                 </div>
             </div>
+            
             <div class='headrest-preview'>
                 <div class='content'>
                     <div class='headrest-logo logo-state-1'>
-                        <img id='headrest-logo-img' src='./assets/images/logo/Безлого.png' alt="">
+                        <img id='headrest-logo-img' src='./images/logo/Безлого.png' alt="">
                     </div>
                     <p class='front-text'></p>
-
-                    <img id='headrest-image' src='./assets/images/autoheadrest/color-black1outline-gold.png'>
+                    <img id='headrest-image' src='./images/autoheadrest/color-black1outline-gold.png'>
                 </div>
             </div>
         </div>
     </div>
     <div id="modal">
-        <span id="modal_close">X</span>
-        <div class='customer-info'>
-            <h1 class='header-text'>Введите контактные данные</h1>
-            <input type='text' form='pillow-form' name='customer_name' placeholder="Ваше имя..." required>
-            <input type='text' form='pillow-form' name='customer_phone' placeholder="Ваш номер телефона..." required>
-            <button type='submit' form='pillow-form'>Подтвердить заказ</button>
+        <h1 class="header-text">Осталось совсем чуть-чуть ;)</h1>
+        <div class='modal-content'>
+            <div class="pillow-image">
+                <img src="./images/modal_background.png">
+            </div>
+            <div class='customer-info'>
+                <h1 class='header-text'>Заполните Ваши данные: </h1>
+                <input type='text' form='pillow-form' name='customer_name' placeholder="Ваше имя*" required>
+                <input type='text' id='telephone' form='pillow-form' name='customer_phone' placeholder="Ваш телефон*" required>
+                <input type='email' form='pillow-form' name='customer_email' placeholder="Ваш e-mail..." required>
+                <button type='submit' form='pillow-form'>Подтвердить заказ</button>
+            </div>
+            <div class='congratutlations' style='display:none'>
+                <p class="header-text">Спасибо за заказ!</p>
+                <button disabled>Отправлено</button>
+                <button id='save_pic'>Скачать эскиз</button>
+            </div>
         </div>
-        <h1 class='header-text congrats' style='display:none'>Спасибо за заказ</h1>
+        <div class="caution">
+            <span class="remark"> ВНИМАНИЕ: </span>
+            Созданный Вами дизайн будет дополнительно обработан в специальной программе для загрузки в вышивальную машину. Перед началом вышивки, обработанный дизайн будет дополнительно с Вами согласован.
+            
+        </div>
     </div>
     <div id="overlay"></div>
     <div class='copyright-footer'>Constructor developed by lefftolstoi - <a href="https://vk.com/lefftolstoi"><i class="fab fa-vk"></i></a> <a href="https://t.me/lefftolstoi"><i class="fab fa-telegram"></i></a></div>
-    <script src="./assets/scripts/libs/jquery-3.3.1.min.js" defer></script>
-    <script src="./assets/scripts/libs/jquery-ui.min.js" defer></script>
-    <script src="./assets/scripts/libs/select2.min.js" defer></script>
-    <script src="./assets/scripts/libs/html2canvas.min.js"></script>
-    <script src="./assets/scripts/libs/smtp.js"></script>
-    <script src="./assets/scripts/script.js" defer></script>
+    <script src="./js/app.min.js" defer></script>
 </body>
 
 </html>
