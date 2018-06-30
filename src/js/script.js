@@ -249,7 +249,7 @@ $(document).ready(function () {
 				}
 			);
 	});
-    var im = new inputMask('+7-999-99-99')
+    var im = new inputMask('+7-999-999-99-99');
     im.mask($('#telephone'));
 
     //Form submit
