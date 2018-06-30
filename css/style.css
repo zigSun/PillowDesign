@@ -85,7 +85,8 @@ html {
   text-align: center;
   font-family: "SFUIDisplaySMB"; }
   .header-text.modal-text {
-    font-family: "NextArt"; }
+    font-family: "NextArt";
+    margin-bottom: 0; }
 
 .container {
   display: flex;
@@ -386,7 +387,7 @@ html {
   justify-content: space-between;
   background: #31a6d9;
   color: #ffffff;
-  width: 50%;
+  width: 65%;
   position: fixed;
   top: -30%;
   left: 50%;
@@ -426,7 +427,7 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 10px 0; }
+    margin-bottom: 3rem; }
     @media (max-width: 1200px) {
       #modal .modal-content {
         flex-direction: column; } }
@@ -435,6 +436,11 @@ html {
   #modal .customer-text {
     font-family: "SFUIDisplayReg";
     font-size: 1.5em; }
+  #modal .congrats-text {
+    margin: 6rem 0;
+    font-family: "SFUIDisplayReg";
+    text-align: center;
+    font-size: 3em; }
   #modal .flex-row {
     display: flex;
     justify-content: space-between; }
