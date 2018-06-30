@@ -1,7 +1,6 @@
 node_modules/
 package.json
 package-lock.json
-gulpfile.js
 assets/images/logoorig/
 mywork
 mywork.pub
