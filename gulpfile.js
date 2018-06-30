@@ -85,4 +85,4 @@ gulp.task('watch', function () {
   return gulp.watch(path.src.all,['default']);
 });
 
-gulp.task('default', ['build:clean','html', 'css', 'js','images','fonts' ]);
+gulp.task('default', ['html', 'css', 'js','images','fonts' ]);

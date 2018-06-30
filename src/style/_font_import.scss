@@ -19,7 +19,8 @@ $fonts_import: (
   ("BehrensAntiqua", "#{$fonts_path}/BehrensAntiqua.ttf"),
   ("CityFlowers", "#{$fonts_path}/CityFlowers.ttf"),
   ("Raleway", "#{$fonts_path}/Raleway.ttf"),
-  ("DKKnucklebones", "#{$fonts_path}/DKKnucklebones.otf")
+  ("DKKnucklebones", "#{$fonts_path}/DKKnucklebones.otf"),
+  ("NextArt", "#{$fonts_path}/NextArt.otf")
 );
 
 @each $font in $fonts_import {
