@@ -170,6 +170,9 @@ html {
     transition: ease 0.3s; }
     .color-button span:hover {
       padding: 10px; }
+      +
+.color-button span:hover .tooltip {
+        visibility: visible; }
     .pillow-color-radio-group input[type="radio"]:checked ~ .color-button span {
       padding: 10px; }
   .color-button .milky {
@@ -370,9 +373,6 @@ html {
   width: 190px;
   z-index: 1000; }
 
-.color-button:hover .tooltip {
-  visibility: visible; }
-
 .ui-draggable:hover {
   cursor: move; }
 
@@ -386,7 +386,7 @@ html {
   justify-content: space-between;
   background: #31a6d9;
   color: #ffffff;
-  width: 65%;
+  width: 50%;
   position: fixed;
   top: -30%;
   left: 50%;
@@ -401,7 +401,7 @@ html {
     width: 100%;
     height: 2.5rem;
     padding-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     font-family: "SFUIDisplayLight";
     font-size: 1.2rem;
     font-weight: bold;
@@ -425,15 +425,23 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin: 10px 0; }
     @media (max-width: 1200px) {
       #modal .modal-content {
         flex-direction: column; } }
   #modal .customer-info {
     max-width: 400px; }
+  #modal .customer-text {
+    font-family: "SFUIDisplayReg";
+    font-size: 1.5em; }
+  #modal .flex-row {
+    display: flex;
+    justify-content: space-between; }
 
 .caution {
-  font-family: 'SFUIDisplayReg'; }
+  font-family: 'SFUIDisplayReg';
+  color: black; }
 
 #overlay {
   z-index: 3;
@@ -461,5 +469,10 @@ button {
   font-size: 1.5rem;
   outline: none;
   border-color: black; }
+  button.save_pic {
+    background-color: #848484;
+    margin-left: 0.5rem; }
   button:hover {
     background-color: #3ab03e; }
+    button:hover#submited {
+      background-color: #56c75a; }
