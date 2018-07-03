@@ -399,7 +399,7 @@ html {
   @media (max-width: 960px) {
     #modal {
       left: 0;
-      margin: -250px 0 0 -1%; } }
+      margin: -250px 0 0 4%; } }
   #modal input {
     border: 2px solid #ffffff;
     border-radius: 10px;
