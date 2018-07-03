@@ -387,7 +387,8 @@ html {
   justify-content: space-between;
   background: #31a6d9;
   color: #ffffff;
-  width: 65%;
+  width: 100%;
+  max-width: 950px;
   position: fixed;
   top: -30%;
   left: 50%;
@@ -395,6 +396,10 @@ html {
   opacity: 0;
   padding: 1rem;
   z-index: 5; }
+  @media (max-width: 960px) {
+    #modal {
+      left: 0;
+      margin: -250px 0 0 -1%; } }
   #modal input {
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -428,7 +433,7 @@ html {
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem; }
-    @media (max-width: 1200px) {
+    @media (max-width: 650px) {
       #modal .modal-content {
         flex-direction: column; } }
   #modal .customer-info {
@@ -436,6 +441,9 @@ html {
   #modal .customer-text {
     font-family: "SFUIDisplayReg";
     font-size: 1.5em; }
+    @media (max-width: 650px) {
+      #modal .customer-text {
+        text-align: center; } }
   #modal .congrats-text {
     margin: 6rem 0;
     font-family: "SFUIDisplayReg";
