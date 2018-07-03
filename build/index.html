@@ -278,7 +278,7 @@
                 </div>
                 <div class="advanced-text-container-front">
                     <div class='pillow-form-item front-form headrest-form'>
-                        <label for="pillow-advanced-front">Дополнительно:</label>
+                        <label for="pillow-advanced-front">Дополнительный текст:</label>
                         <textarea type='text' name="pillow-advanced-front-text" id="pillow-advanced-front-text" placeholder="Дополнительный текст" maxlength="80"></textarea>
                     </div>
                     <div class='pillow-form-item front-form headrest-form dependent'>
@@ -372,7 +372,7 @@
                 </div>
                 <div class="advanced-text-container-back">
                     <div class='pillow-form-item back-form'>
-                        <label for="pillow-advanced-back-text">Дополнительно:</label>
+                        <label for="pillow-advanced-back-text">Дополнительный текст:</label>
                         <textarea type='text' id="pillow-advanced-back-text" name="pillow-advanced-back-text" placeholder="Дополнительный текст"
                             maxlength="80"> </textarea>
                     </div>
@@ -560,22 +560,28 @@
                 <img src="./images/modal_background.png">
             </div>
             <div class='customer-info'>
-                <h1 class='header-text'>Заполните Ваши данные: </h1>
+                <p class='customer-text'>Заполните Ваши данные: </p>
                 <input type='text' form='pillow-form' name='customer_name' placeholder="Ваше имя*" required>
                 <input type='text' id='telephone' form='pillow-form' name='customer_phone' placeholder="Ваш телефон*" required>
-                <input type='email' form='pillow-form' name='customer_email' placeholder="Ваш e-mail..." required>
-                <button type='submit' form='pillow-form'>Подтвердить заказ</button>
-            </div>
+                <input type='email' form='pillow-form' name='customer_email' placeholder="Ваш e-mail..." >
+                <div class='flex-row'>
+                    <button type='submit' form='pillow-form' id="submit_button">Подтвердить заказ</button>
+                    <button class='save_pic'>Скачать эскиз</button>   
+                </div>
+            </div>    
             <div class='congratutlations' style='display:none'>
-                <h1 class="header-text modal-text">Спасибо за заказ!</h1>
-                <p class="header-text">Отправлено</button>
-                <button id='save_pic'>Скачать эскиз</button>
+                <h1 class="congrats-text">СПАСИБО ЗА ЗАКАЗ!</h1>
+                <div class='flex-row'>
+                    <button type='submit' form='pillow-form' id="submited">Отправлено</button>
+                    <button class='save_pic'>Скачать эскиз</button>   
+                </div>
             </div>
+                
+            
         </div>
         <div class="caution">
             <span class="remark"> ВНИМАНИЕ: </span>
             Созданный Вами дизайн будет дополнительно обработан в специальной программе для загрузки в вышивальную машину. Перед началом вышивки, обработанный дизайн будет дополнительно с Вами согласован.
-            
         </div>
     </div>
     <div id="overlay"></div>

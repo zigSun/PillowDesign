@@ -85,7 +85,8 @@ html {
   text-align: center;
   font-family: "SFUIDisplaySMB"; }
   .header-text.modal-text {
-    font-family: "NextArt"; }
+    font-family: "NextArt";
+    margin-bottom: 0; }
 
 .container {
   display: flex;
@@ -170,6 +171,9 @@ html {
     transition: ease 0.3s; }
     .color-button span:hover {
       padding: 10px; }
+      +
+.color-button span:hover .tooltip {
+        visibility: visible; }
     .pillow-color-radio-group input[type="radio"]:checked ~ .color-button span {
       padding: 10px; }
   .color-button .milky {
@@ -370,9 +374,6 @@ html {
   width: 190px;
   z-index: 1000; }
 
-.color-button:hover .tooltip {
-  visibility: visible; }
-
 .ui-draggable:hover {
   cursor: move; }
 
@@ -386,7 +387,8 @@ html {
   justify-content: space-between;
   background: #31a6d9;
   color: #ffffff;
-  width: 65%;
+  width: 100%;
+  max-width: 950px;
   position: fixed;
   top: -30%;
   left: 50%;
@@ -394,6 +396,10 @@ html {
   opacity: 0;
   padding: 1rem;
   z-index: 5; }
+  @media (max-width: 960px) {
+    #modal {
+      left: 0;
+      margin: -250px 0 0 -1%; } }
   #modal input {
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -401,7 +407,7 @@ html {
     width: 100%;
     height: 2.5rem;
     padding-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     font-family: "SFUIDisplayLight";
     font-size: 1.2rem;
     font-weight: bold;
@@ -425,15 +431,31 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; }
-    @media (max-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 3rem; }
+    @media (max-width: 650px) {
       #modal .modal-content {
         flex-direction: column; } }
   #modal .customer-info {
     max-width: 400px; }
+  #modal .customer-text {
+    font-family: "SFUIDisplayReg";
+    font-size: 1.5em; }
+    @media (max-width: 650px) {
+      #modal .customer-text {
+        text-align: center; } }
+  #modal .congrats-text {
+    margin: 6rem 0;
+    font-family: "SFUIDisplayReg";
+    text-align: center;
+    font-size: 3em; }
+  #modal .flex-row {
+    display: flex;
+    justify-content: space-between; }
 
 .caution {
-  font-family: 'SFUIDisplayReg'; }
+  font-family: 'SFUIDisplayReg';
+  color: black; }
 
 #overlay {
   z-index: 3;
@@ -461,5 +483,10 @@ button {
   font-size: 1.5rem;
   outline: none;
   border-color: black; }
+  button.save_pic {
+    background-color: #848484;
+    margin-left: 0.5rem; }
   button:hover {
     background-color: #3ab03e; }
+    button:hover#submited {
+      background-color: #56c75a; }

@@ -288,7 +288,7 @@ $(document).ready(function () {
         $('.congratutlations').show();
     });
     
-    $('#save_pic').click(function () {
+    $('.save_pic').click(function () {
         html2canvas(document.querySelector('.pillow-preview'))
             .then(canvas => {
                     var a = document.createElement('a');

@@ -26,7 +26,8 @@ html {
   font-family: "SFUIDisplaySMB";
 
   &.modal-text {
-    font-family: "NextArt"
+    font-family: "NextArt";
+    margin-bottom: 0;
   }
 }
 .container {
@@ -128,7 +129,12 @@ html {
     transition: ease 0.3s;
     
     &:hover {
-      padding: 10px;
+      padding: 10px;+
+      
+      & .tooltip {
+        visibility: visible;
+      }
+    
     }
 
     .pillow-color-radio-group input[type="radio"]:checked ~ & {
@@ -153,8 +159,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // font-family: "SFUIDisplayReg";
-  // padding: 1rem;
   flex-grow: 1;
   font-family: "SFUIDisplaySMB";
   max-width: 400px;
@@ -318,9 +322,7 @@ html {
   z-index: 1000;
 }
 
-.color-button:hover .tooltip {
-  visibility: visible;
-}
+
 
 .ui-draggable:hover {
   cursor: move;
@@ -339,7 +341,8 @@ html {
   background: #31a6d9;
   color : #ffffff;
 
-  width: 65%;
+  width: 100%;
+  max-width: 950px;
   position: fixed;
   top:-30%;
   left: 50%;
@@ -348,14 +351,20 @@ html {
   padding: 1rem;
   z-index: 5;
 
+  @media (max-width: 960px) {
+    left : 0;
+    margin: -250px 0 0 -1%;
+  }
+
   & input {
     border: 2px solid #ffffff;
     border-radius: 10px;
     background: transparent;
     width: 100%;
+
     height: 2.5rem;
     padding-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   
     font-family: "SFUIDisplayLight";
     font-size: 1.2rem;
@@ -374,20 +383,41 @@ html {
     flex-direction: row;
     align-items : center;
     justify-content: center;
-    
-    @media (max-width : 1200px) {
+    margin-bottom: 3rem;
+    @media (max-width : 650px) {
       flex-direction: column;
     }
   }
 
   & .customer-info {
     max-width: 400px;
+    
+  }
+  
+  & .customer-text {
+    font-family: "SFUIDisplayReg";
+    font-size : 1.5em;
+    @media (max-width : 650px) {
+      text-align: center;
+    }
+  }
+  & .congrats-text {
+    margin: 6rem 0;
+    font-family: "SFUIDisplayReg";
+    text-align: center;
+    font-size: 3em;
+  }
+
+  & .flex-row {
+    display: flex;
+    justify-content: space-between;
   }
 
 }
 
 .caution {
   font-family: 'SFUIDisplayReg';
+  color : black;
 }
 
 
@@ -425,8 +455,18 @@ button {
   
   outline: none;
   border-color: black;
+  
+
+  &.save_pic {
+    background-color: #848484;
+    margin-left: 0.5rem;
+  }
 
   &:hover {
     background-color: darken($button_color,10%);
+    &#submited {
+      background-color: $button_color;
+    }
   }
+  
 }
