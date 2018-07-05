@@ -1,6 +1,6 @@
 var translateObj = {
     'pillow-type' : 'Тип изделия',
-    'pillow-color' : 'Цвет изделия',
+    'pillow-main-color' : 'Цвет изделия',
     'pillow-mark-front' : 'Логотип(лицевая сторона)',
     'pillow-mark-back' : 'Логотип(задняя сторона)',
     'pillow-auto-model' : 'Модель автомобиля',
@@ -49,7 +49,7 @@ var translateObj = {
     'yellow' : "Желтый",
     "gold" : "Золотой",
     "silver" : "Серебряный",
-    "grey" : "Серый"
+    "gray" : "Серый"
 
 };
 
