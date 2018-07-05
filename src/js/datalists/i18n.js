@@ -25,7 +25,32 @@ var translateObj = {
     'headrest' : 'Автоподголовник',
     'normal' : 'Простой',
     'italic' : 'Курсив',
-    'bold' : 'Жирный'
+    'bold' : 'Жирный',
+
+    "milky" : "Молочный",
+    "black" : "Черный",
+    "red"   : "Красный",
+    "ruby"  : "Рубиновый",
+    "cyan"  : "Голубой",
+    "blue"  : "Синий",
+    "light-gray" : "Светло-серый",
+    "dark-gray" : "Темно-серый",
+    "light-beige" : "Светло-бежевый",
+    "dark-beige" : "Темно-бежевый",
+    "brown" : "Коричневый",
+    "fuscate" : "Фисташковый",
+    "green" : "Зеленый",
+    "light-purple" : "Светло-фиолетовый",
+    'purple' : "Фиолетовый",
+    "lilac" :  "Сереневый",
+    "rose" : "Розовый",
+    'orange' : "Оранжевый",
+    'turquoise' : "Бирюзовый",
+    'yellow' : "Желтый",
+    "gold" : "Золотой",
+    "silver" : "Серебряный",
+    "grey" : "Серый"
+
 };
 
 module.exports = translateObj;

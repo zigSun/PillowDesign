@@ -108,11 +108,14 @@ html {
 .color-button {
   display: inline-block;
   position: relative;
-  width: 16px;
+  width: 20px;
   margin: 10px;
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  &:hover .tooltip {
+    visibility: visible;
+  }
 
   span {
     display: block;
@@ -129,14 +132,8 @@ html {
     transition: ease 0.3s;
     
     &:hover {
-      padding: 10px;+
-      
-      & .tooltip {
-        visibility: visible;
-      }
-    
+      padding: 10px;
     }
-
     .pillow-color-radio-group input[type="radio"]:checked ~ & {
       padding: 10px;
     }
@@ -341,8 +338,8 @@ html {
   background: #31a6d9;
   color : #ffffff;
 
-  width: 100%;
-  max-width: 950px;
+  width: 89%;
+  max-width: 860px;
   position: fixed;
   top:-30%;
   left: 50%;
@@ -353,7 +350,7 @@ html {
 
   @media (max-width: 960px) {
     left : 0;
-    margin: -250px 0 0 -1%;
+    margin: -250px 4% 0 4%;
   }
 
   & input {

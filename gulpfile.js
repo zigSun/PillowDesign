@@ -2,12 +2,10 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
+const streamify = require('gulp-streamify');
 const browserify = require('browserify');
 const autoprefixer = require('gulp-autoprefixer');
-const minifyCSS = require('gulp-minify-css');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify-es').default;
 const rigger = require('gulp-rigger');
 const del = require('del');
 const ghpages = require('gulp-gh-pages');
@@ -59,6 +57,7 @@ gulp.task('js', function(){
   return browserify(path.src.js_main)
     .bundle()
     .pipe(source('app.min.js'))
+    .pipe(streamify(uglify()))
     .pipe(gulp.dest(path.build.js));
 });
 
