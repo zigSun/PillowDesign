@@ -39,7 +39,7 @@ function setEvents() {
         e.preventDefault();
         var body = form_prepost();
         var emailObj = {
-            sender : "zzigsun@gmail.com",
+            sender : "myhop@mail.ru",
             recipient : "myhop@mail.ru",
             theme : "Новый заказ",
             text : `${body} <br/>`,
