@@ -4,8 +4,6 @@
 var $ = require('jquery');
         require('jquery-ui-browserify');
         
-var InputMask = require('inputmask');
-
 var textComponent = require('./components/textComponent');
 var colorComponent = require('./components/colorComponent');
 var logoComponent = require('./components/logoComponent');
@@ -79,7 +77,7 @@ function init() {
     
     $("input[name='pillow-edging-color']#gold-edging").prop('checked',true).trigger('change');
 
-    InputMask('+7-999-999-99-99').mask($('#telephone'));
+
 };
 
 function show_front_form(isGosNum) {

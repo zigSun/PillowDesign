@@ -6,8 +6,10 @@ var html2canvas = require('html2canvas');
 var Dropbox = require('dropbox').Dropbox;
 var i18n = require('../datalists/i18n');
 var uuid = require('uuid/v4');
+var InputMask = require('inputmask');
 
 function initModalComponent() {
+    InputMask('+7-999-999-99-99').mask($('#telephone'));
     setEvents();
 };
 
@@ -131,7 +133,7 @@ function save_screenshot(className) {
 
 function sendEmailWithPicture(className,emailObj) {
     
-    var dbx = new Dropbox({ accessToken: 'lkJGAKBZlJAAAAAAAAAABokbmFfinQvUIrKuOm3SBMok5iUHXhyIKhUNTK0CtJQd' });
+    var dbx = new Dropbox({ accessToken: '0SVCRi4gZ6AAAAAAAAAACc-YzVIUQImynkS_UPzMK14MsiKvrWVW4OCrrKFdLOX5' });
     
     html2canvas(document.querySelector(className))
         .then(function(canvas) {
