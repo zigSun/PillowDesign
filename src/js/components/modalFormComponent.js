@@ -40,10 +40,10 @@ function setEvents() {
         var body = form_prepost();
         var emailObj = {
             sender : "zzigsun@gmail.com",
-            recipient : "vladlisitsinfl@gmail.com",
+            recipient : "myhop@mail.ru",
             theme : "Новый заказ",
             text : `${body} <br/>`,
-            token : {token : 'b60f57c1-122a-436d-98c8-6491c59b32bc'}
+            token : {token : '66c410b5-82f4-4469-95a5-cdb2f149545f'}
         }
         //'b54fb7eb-e5f3-43ab-88b6-0b9e154a5640'
         switch ($("select#pillow-type").val()) {
