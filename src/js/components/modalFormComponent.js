@@ -41,7 +41,7 @@ function setEvents() {
         var emailObj = {
             sender : "myhop@mail.ru",
             recipient : "myhop@mail.ru",
-            theme : "Новый заказ",
+            theme : "Новый заказ!",
             text : `${body} <br/>`,
             token : {token : '66c410b5-82f4-4469-95a5-cdb2f149545f'}
         }
