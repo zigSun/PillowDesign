@@ -57,7 +57,7 @@ gulp.task('js', function(){
   return browserify(path.src.js_main)
     .bundle()
     .pipe(source('app.min.js'))
-    .pipe(streamify(uglify()))
+    //.pipe(streamify(uglify()))
     .pipe(gulp.dest(path.build.js));
 });
 

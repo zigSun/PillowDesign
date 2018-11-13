@@ -20,20 +20,20 @@ function calculate_price() {
         case 'nogosnum':
             finish_price+=500;
             finish_price+=pillow_auto_mark_front_cat*100 + pillow_auto_mark_reverse_cat*100;
-            if (pillow_auto_model != '') {
+            if (pillow_auto_model != '' &&  typeof pillow_auto_model != 'undefined') {
                 finish_price+=100;
                 if(pillow_model_color == 'silver' || pillow_model_color == 'gold') 
                     finish_price+=50;
             }
-            if(pillow_advanced_front_text != '') {
+            if(pillow_advanced_front_text != '' && typeof pillow_advanced_front_text != 'undefined') {
                 finish_price+=100;
                 if(pillow_advanced_front_color == 'silver' || pillow_advanced_front_color == 'gold')
                     finish_price+=50;
             }
             
-            if(pillow_advanced_reverse_text != '') {
+            if(pillow_advanced_reverse_text != ''  && typeof pillow_advanced_reverse_text != 'undefined') {
                 finish_price+=100;
-                if(pillow_advanced_reverse_color == 'silver' || pillow_advanced_front_color == 'gold')
+                if(pillow_advanced_reverse_color == 'silver' || pillow_advanced_reverse_color == 'gold')
                     finish_price+=50;
             }
             finish_price*=quantity;
@@ -41,7 +41,7 @@ function calculate_price() {
         case 'headrest':
             finish_price+=450;
             finish_price+=pillow_auto_mark_front_cat*100;
-            if(pillow_advanced_front_text != '') {
+            if(pillow_advanced_front_text != '' && typeof pillow_advanced_front_text != 'undefined') {
                 finish_price+=100;
                 if(pillow_advanced_front_color == 'silver' || pillow_advanced_front_color == 'gold')
                     finish_price+=50;

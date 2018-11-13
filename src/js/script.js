@@ -76,8 +76,7 @@ function init() {
     $("input[name='pillow-advanced-back-color']#red-advanced-back").prop('checked',true).trigger('change');
     
     $("input[name='pillow-edging-color']#gold-edging").prop('checked',true).trigger('change');
-
-
+    calcPrice();
 };
 
 function show_front_form(isGosNum) {
